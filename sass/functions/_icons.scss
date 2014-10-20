@@ -1,11 +1,11 @@
 @function match($list, $icon) {
   @each $item in $list {
     $index: index($item, $icon);
-      @if $index {
-        $return: if($index == 1, 2, $index);
-        @return nth($item, $return);
-      }
+    @if $index {
+      $return: if($index == 1, 2, $index);
+      @return nth($item, $return);
     }
+  }
   @return false;
 }
 
@@ -23,13 +23,11 @@
     @each $i in $icon {
       @include i($i);
     }
-  }
-  @elseif ($icon == all) {
+  } @else if ($icon == all) {
     @each $icon in $entypo-icons {
       @include i(nth($icon, 1));
     }
-  }
-  @else {
+  } @else {
     @include i($icon);
   }
 }
