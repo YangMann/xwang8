@@ -68,11 +68,11 @@ form {
     border: 1px solid darken($default-color, 10%);
     @include line-and-height(height-calc($norm));
     @include font-size($norm);
-    @include border-radius(4px);
+    @include border-radius(2px);
     &.search {
       @include line-and-height(height-calc($norm));
       @include shape(oval);
-      padding-right: 0;
+//      padding-right: 0;
     }
   }
   .input.textarea {
@@ -215,13 +215,13 @@ label + {
         @if($icons != ""){
           font-family: "#{$icons}";
           @if nth($error, 1) == danger {
-            content: "#{$entypo-icon-cancel-circled}";
+            content: unquote("\"#{$entypo-icon-cancel-circled}\"");
           }
           @if nth($error, 1) == warning {
-            content: "#{$entypo-icon-attention}";
+            content: unquote("\"#{$entypo-icon-attention}\"");
           }
           @if nth($error, 1) == success {
-            content: "#{$entypo-icon-check}";
+            content: unquote("\"#{$entypo-icon-check}\"");
           }
         font-size: $norm;
         position: absolute;
@@ -333,7 +333,7 @@ label + {
     @include border-radius(8px);
   }
   .checkbox span {
-    @include border-radius(3px);
+    @include border-radius(1px);
   }
 }
 
@@ -351,7 +351,7 @@ label + {
   margin: 0 0 2px 1.2%;
   overflow: hidden;
   border: 1px solid darken($default-color, 5%);
-  @include border-radius(4px);
+  @include border-radius(2px);
   font-family: $font-family;
   font-weight: $font-weight-semibold;
   height: auto;

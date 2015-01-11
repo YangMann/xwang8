@@ -1,1 +1,143 @@
 // Your custom SCSS should be written here...
+
+body#home {
+  font-weight: $font-weight-regular;
+  text-align: center;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-thin;
+  }
+
+  h2 {
+    padding-bottom: .5em;
+  }
+
+  li {
+    text-align: left;
+  }
+}
+
+footer {
+  text-align: left;
+  #author {
+    font-size: 10px;
+    color: #cccccc;
+
+    a {
+      color: #999999;
+    }
+  }
+}
+
+.splash {
+  @include hidden(all-phones);
+
+  background: $navbar-color url("../img/SJTU-white@2x.png") no-repeat 16% 16px;
+  background-size: 160px;
+  text-align: right;
+  padding: 40px 0;
+  min-height: 185px;
+
+  h1, h5 {
+    color: $navbar-link-color;
+    font-weight: $font-weight-thin;
+  }
+
+  h1 > span {
+    font-size: larger;
+  }
+}
+
+.logo.mobile {
+  @include hidden("min-width: 720px");
+  @include visible(all-phones);
+}
+
+#wxb_intro {
+  @include respond("min-width: 720px") {
+    background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom;
+    background-size: contain;
+  }
+}
+
+.wrapper {
+  padding: 75px 20px 70px 20px;
+}
+
+.wrapper.shaded {
+  background-color: #E9E9E9 !important;
+  background-size: cover;
+}
+
+#wxb_intro {
+  text-align: center;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+  }
+
+  h2 {
+    padding-bottom: .5rem;
+  }
+
+  dl {
+    margin-bottom: 1rem;
+  }
+}
+
+#whats-new-table {
+  tr {
+    td:first-child {
+      font-weight: $font-weight-regular;
+    }
+  }
+}
+
+.nobreak {
+  white-space: nowrap;
+}
+
+#biography {
+
+  .wrapper > section {
+    min-height: 150px;
+  }
+
+  dt {
+    float: left;
+    min-width: 8em;
+  }
+
+  #SJTU {
+    background: url("../img/SJTU-gray.png") no-repeat 80% 25px;
+    background-size: 250px;
+  }
+
+  #NCSU {
+    background: url("../img/NC_State_Seal.svg.png") no-repeat 20% 25px;
+    background-size: 250px;
+  }
+
+  #THU {
+    background: url("../img/THU.png") no-repeat 80% 25px;
+    background-size: 250px;
+  }
+
+  #SJTUu {
+    background: url("../img/SJTU-gray.png") no-repeat 20% 25px;
+    background-size: 250px;
+  }
+}
+
+#projects {
+  h2 {
+    margin-bottom: 1em;
+    font-weight: $font-weight-light;
+  }
+  h3 {
+    text-align: right;
+  }
+  table tr td:first-child {
+    width: 14rem;
+  }
+}
