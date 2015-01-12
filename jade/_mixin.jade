@@ -1,0 +1,26 @@
+mixin li_a(href, name)
+    li
+        if attributes.span == true
+            a(class=attributes.class, href=href)
+                if attributes.i_pos == "left"
+                    i(class!=attributes.i)
+                span #{name}
+                if attributes.i_pos == "right"
+                    i(class!=attributes.i)
+        else
+            a(class=attributes.class, href=href)=name
+                if attributes.i_pos == "left"
+                    i(class!=attributes.i)
+                if attributes.i_pos == "right"
+                    i(class!=attributes.i)
+        if block
+            block
+
+mixin li_btn(href, name)
+    li
+        if attributes.btn_style
+            div.btn(class=attributes.btn_style)
+                a(target="_blank", href=href)=name
+        else
+            div.btn.default
+                a(target="_blank", href=href)=name

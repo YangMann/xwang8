@@ -1,0 +1,49 @@
+extends _base
+block vars
+   - var title = "Biography"
+   - var body_id = "biography"
+   - var footer_shaded = false
+block content
+   include _splash
+   include _navbar
+   .wrapper#SJTU
+      section.row
+         article.eight.columns
+            dl
+               dt 2013&mdash;
+               dd Distinguished Professor, 特聘教授
+               dt 2011&mdash;
+               dd Professor, 责任教授
+               dt 2008&mdash;2011
+               dd Associate Professor
+               dt 2006&mdash;2008
+               dd Lecturer
+            dl
+               dd School of Electronic, Information and Electrical Engineering
+               dd Shanghai Jiao Tong University, Shanghai, China
+   .wrapper.shaded#NCSU
+      section.row
+         article.eight.columns.push_four
+            dl
+               dt 2001&mdash;2006
+               dd Ph.D. major in Electrical and Computer Engineering
+               dt &nbsp;
+               dd minor in Mathematics
+            dl
+               dd North Carolina State University, Raleigh, NC, USA
+   .wrapper#THU
+      section.row
+         article.eight.columns
+            dl
+               dt 1998&mdash;2001
+               dd M.S. in Computer Science and Technology
+            dl
+               dd Tsinghua University, Beijing, China
+   .wrapper.shaded#SJTUu
+      section.row
+         article.eight.columns.push_four
+            dl
+               dt 1994&mdash;1998
+               dd B.S. (with honors) in Automation
+            dl
+               dd Shanghai Jiao Tong Universtiy, Shanghai, China

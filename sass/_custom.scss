@@ -1,5 +1,15 @@
 // Your custom SCSS should be written here...
 
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
 body#home {
   font-weight: $font-weight-regular;
   text-align: center;
@@ -139,5 +149,13 @@ footer {
   }
   table tr td:first-child {
     width: 14rem;
+  }
+}
+
+ul.dbtns {
+  display: inline-block;
+  overflow: hidden;
+  li {
+    float: left;
   }
 }

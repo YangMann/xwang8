@@ -1,0 +1,146 @@
+extends _base
+
+block vars
+   - var title = "Research - Systems"
+   - var body_id = "system"
+   - var footer_shaded = true
+block content
+   include _splash
+   include _navbar
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/phones.jpg")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/INDAPS.png")
+         article.eight.columns
+            h3 INDAPSON: An Incentive Data Plan Sharing System Based on Self-Organizing Network
+            h5 Sponsored by Qualcomm.com
+            p
+               |The contradiction between dynamic user traffic and fixed data plans has drawn increasing attention in the field of mobile applications. We build a data plan sharing system named INDAPSON to consider a scenario where some smartphone users have surplus data traffic and are willing to help others download data. Virtual credits can be gained as reward, which can be used to ask for future help in downloading.
+               |To realize this model, we make the following contributions:
+               ol
+                  li A dynamic self-organization strategy to adapt to mobile terminals;
+                  li An incentive mechanism named RAP to encourage participation;
+                  li Power-saving strategies to reduce power consumption.
+               |The main advantage of our system is that users gain improvement in download rate while being able to convert their surplus data traffic to virtual credits. The results of expebriment and simulation show that users in our system can manage their surplus data plan more efficiently while a high-speed download rate can be achieved.
+            p The paper about this system has been published in the 33rd Annual IEEE International Conference on Computer Communications (INFOCOM, 2014).
+            ul.dbtns
+               +li_btn("http://v.youku.com/v_show/id_XNjA4NDc3ODk2.html", "VIDEO")(btn_style="primary")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/indaps.html", "DETAIL")(btn_style="success")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2014_indapson.pdf", "PDF")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/INDAPSON.ppt", "PPT")(btn_style="danger")
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 CityDrive: A Map-Generating and Speed-Optimizing Driving System
+            p There have been many traffic light control systems around the globe, but the high cost of infrastructure and maintenance hinders their wide deployment. However, speed-advisory systems enabled by on-vehicle devices are much cheaper and easier to deploy. The first challenge of such systems is to get the traffic signal schedule in complex intersections. The second challenge is to get map information and calculate the distance.
+            p Facing these challenges we devise and implement a speed-advisory driving system called CityDrive, which harnesses the sensor and GPS data from a wide participation of smartphones to suggest proper speed for drivers so that they arrive at intersections in green phase. CityDrive first generates a road map and then infers traffic signal schedules, using only smartphones and a server. CityDrive does not eliminate stops at intersections, but it tries to maximize the probability that vehicles cruise through intersections in green phase. Both simulation and real test show that this continuous speed advisory service effectively smoothes traffic flow and significantly reduces energy consumption.
+            p The paper about this system has been published in the 33rd Annual IEEE International Conference on Computer Communications (INFOCOM, 2014).
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/citydrive.html", "DETAIL")(btn_style="success")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2014_citydrive.pdf", "PDF")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/CityDrive.pptx", "PPT")(btn_style="danger")
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/dirve.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/citydrive.png")
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/car.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/1.png")
+         article.eight.columns
+            h3 SmartTaxiNet: Mobile Service of Driver-Passenger Matching and Taxicab Scheduling System
+            p Taxi dispatching systems have received intense concern in practical usage. However, these systems are usually 1) unable to give a real-time response if drivers or passengers breach the contract 2) inefficient in energy saving because of the first-come-first-serve scheme. These defects may lead to some consequences such as more energy waste and trust crisis.
+            p We propose and implement a mobile computing system called SmartTaxiNet, which not only solves the driver-passenger matching problem efficiently but also provides other strategies, e.g. a skipper detection scheme, to raise clients' contentment. The CabMatch algorithm is designed and applied in the system to perform driver-passenger matching within a complexity of O(n<sup>2</sup> log n). Meanwhile, based on the analysis of the accumulated matching data, the system can also estimate potential passenger locations and traffic patterns.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/taxi.html", "DETAIL")
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 HiQuadLoc: An RSS-Based Indoor Localization System for High-Speed Quadrotors
+            p Indoor localization for Unmanned Aerial Vehicles (UAVs) such as quadrotors has attracted much attention. However, the low-cost Wi-Fi RSS-based localization has not been applied on the quadrotors mainly because the high-speed flight reduces the number of times for RSS measurement. Moreover, the workload of collecting RSS training data is huge for 3-D indoor localization.
+            p In this study, we build HiQuadLoc, a new RSS-based indoor localization system for high-speed quadrotors. The key idea is leveraging the historical localization results and the motion information of the quadrotors to improve accuracy. During the RSS training data collection, we use interpolation to estimate the probability distributions of different RSS values.
+            p Our main contributions are:
+               ol
+                  li a series of methods including path estimation, path fitting and location prediction to reduce the adverse impact of high-speed flight;
+                  li a 4-D RSS interpolation algorithm to reduce the efforts needed to collect RSS training data with consideration of their statistical properties.
+            p We have implemented a prototype system of HiQuadLoc. Experimental results demonstrate that HiQuadLoc reduces the average location error by more than 50% compared with normal RSS-based systems, and the workload of RSS training data collection is reduced by more than 80%.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/HiQuadLoc.html", "DETAIL")(btn_style="success")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/HiQuadLoc%20An%20RSS-Based%20Indoor%20Localization%20System%20for%20High-Speed%20Quadrotors.pptx", "PPT")(btn_style="danger")
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/flying.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/quadrotor_small.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/interpolation.png")
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/smartAP.jpg")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/SynLoc_small.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/SAPLOC_map.png")
+         article.eight.columns
+            h3 SAPLOC: An Indoor Localization System Based on Smart Access Points
+            p Indoor localization based on Wi-Fi fingerprints has been an active research topic in the recent years. However, existing approaches do not consider the instability of unreliable Wi-Fi access points (APs), particularly the ones deployed by individual users. This instability impacts the localization accuracy severely, due to the unreliable or even wrong Wi-Fi fingerprints. Ideally, the localization should be done using only the welldeployed APs (e.g., deployed by the facility team of a building). However, in many places the number of these APs is too few to achieve a good localization accuracy.
+            p To solve this problem, we leverage emerging smart APs equipped with multi-mode antennas, and build a new indoor localization system called SAPLOC to reduce the number of necessary APs. The key idea is controlling the modes of AP antennas to generate more fingerprints with fewer APs. Consequently, SAPLOC achieves a good accuracy using fewer APs, compared to existing approaches.
+            p To address the challenges in switching antenna modes, we design:
+               ol
+                  li A synchronous localization strategy to manage the synchronization between the mode switches of APs and the fingerprint measurements of mobile terminals (e.g., smartphones).
+                  li A self-adaptation adjustment method to adapt to the unstable wireless transmission and diversity of terminal devices.
+            p We have implemented a prototype system of SAPLOC using smart APs and commercial smartphones. Experimental results demonstrate that SAPLOC is able to reduce the number of necessary APs by 50%, and maintain the same localization accuracy.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/SAPLOC.html", "DETAIL")
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 Indoor Localization with a Crowdsourcing based Fingerprints Collecting (Joint with Prof. Hui Yu)
+            p Fingerprint matching is adopted by a large family of indoor localization schemes, where collecting fingerprints is inevitable but all consuming. While the increasingly popular crowdsourcing based approach provides an opportunity to relieve the burden of fingerprints collecting, a number of formidable challenges for such an approach have yet been studied.
+            p In this study, we propose a crowdsourcing based fingerprints collecting mechanism for indoor localization systems, where the important challenges including the large data amount, device heterogeneity and real time response are studied and resolved. With our approach, massive raw fingerprints will be divided into small clusters while diverse devices' uploaded fingerprints will be merged to overcome device heterogeneity, both of them will contribute to reduce response time. We build a mobile cloud testbed to verify our proposed scheme, and comprehensive real-world experiment results indicate that our scheme provides comparable localization accuracy.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/localization.html", "DETAIL")(btn_style="success")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/indoor.pptx", "PPT")(btn_style="danger")
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/IMG_0714.jpg")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/Localization.png")
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/weibo.png")
+         article.eight.columns
+            h3 Data mining of Sina-Weibo
+            p Sina-Weibo produces a mass of microblogs every day. These data are very helpful for research with respect to anthropology, social networks, urban planning and other aspects.
+            p Our purpose is to investigate whether there exists a hierarchical structure about the crowd's attention on a site or a region which is similar with the ego networks proposed by an anthropologist named Dunbar. The result can be used in studying human behavior and applied to a recommender system such as a friend recommender system which recommends friends that have the same interest.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Sinaweibo.html", "DETAIL")
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 Smart car and four-rotor aircraft experiment system
+            p The smart cars are equipped with XILINX FPGA. The main control components are ZEDBORAD（XILINX Zynq 7000 FPGA，CORTEX-A9）or NEXYS3 （XILINX Spartan-6 FPGA， ARM CORTEX-M0）.Camera, wireless router, supersonic detector are also available. Functions such as video capture, video transmission, smartphone control can also be easily realized.
+            p The size and weight of a four-rotor aircraft in our experiment system can be changed by restructuring. Flight controllers are used to operate the algorithm of flight attitude control. The aircrafts can act as the carriers for camera, acceleration sensor and other wireless sensors.
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/smartcar.jpg")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/02230170.jpg")
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image002%2520(2).png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/cooperative%20relay_01.png")
+         article.eight.columns
+            h3 VSMC MIMO: A Spectral Efficient Scheme for Cooperative Relay in Cognitive Radio Networks
+            p Multiple-Input Multiple-Output (MIMO) technology has become an efficient way to improve the capacity and reliability of wireless networks. Traditional MIMO schemes are designed mainly for the scenario of contiguous spectrum ranges. However, in cognitive radio networks, the available spectrum is discontiguous, making traditional MIMO schemes inefficient for spectrum usage. This motivates the design of new MIMO schemes that apply to networks with discontiguous spectrum ranges.
+            p We propose a scheme called VSMC MIMO, which enables MIMO nodes to transmit variable numbers of streams in multiple discontinuous spectrum ranges. This scheme can largely improve the spectrum utilization and meanwhile maintain the same spatial multiplexing and diversity gains as traditional MIMO schemes. To implement this spectral-efficient scheme on cooperative MIMO relays in cognitive radio networks, we propose a joint relay selection and spectrum allocation algorithm and a corresponding MAC protocol for the system. We also build a testbed by the Universal Software Radio Peripherals (USRPs) to evaluate the performances of the proposed scheme in practical networks. The experimental results show that VSMC MIMO can efficiently utilize the discontiguous spectrum and greatly improve the throughput of cognitive radio networks.
+            p The paper about this system has been published in the 34rd Annual IEEE International Conference on Computer Communications (INFOCOM, 2015).
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/MIMO.htm", "DETAIL")(btn_style="success")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/VSMC_MIMO.pdf", "PDF")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/VSMC_MIMO.pptx", "PPT")(btn_style="danger")
+

@@ -3,3 +3,8 @@
 .sass-cache
 *.iml
 .idea
+jade/_*.html
+jade/css
+jade/fonts
+jade/img
+jade/js
