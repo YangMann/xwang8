@@ -1,0 +1,21 @@
+extends _base
+
+block vars
+   - var title = "Publication"
+   - var body_id = "publication"
+   - var footer_shaded = false
+
+block content
+   include _splash
+   include _navbar
+   .wrapper
+      section.row.text-center
+         header
+            h5 Talk Slides: "Spatial and Temporal Relationship for Stochastic Networks"
+               a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/spatial_and_temporal_networks_wxb.ppt")  [PPT]
+            h5 Monograph: "MotionCast for Mobile Wireless Networks," Springer Publisher, 2012.
+               a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/Monograph.pdf")  [PDF]
+         ul.dbtns
+            +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/publication_by_area.htm", "View by Area")(btn_style="warning")
+            +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/publication_date.htm", "View by Date")(btn_style="secondary")
+            +li_btn("http://scholar.google.com/citations?user=CT5yZbwAAAAJ&hl=en", "Google Scholar")(btn_style="primary")

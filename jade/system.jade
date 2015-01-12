@@ -3,7 +3,7 @@ extends _base
 block vars
    - var title = "Research - Systems"
    - var body_id = "system"
-   - var footer_shaded = true
+   - var footer_shaded = false
 block content
    include _splash
    include _navbar
@@ -191,3 +191,25 @@ block content
                img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image019.png")
                img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image023.png")
                img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image025.png")
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/BS2.jpg")
+         article.eight.columns
+            h3 Space-Air-Ground networks
+            h5 Joint with Prof. Xiaoying Gan
+            p The Space-Air-Ground networks covers space communications, high-altitude communications and ground communications. It consists of static backbone networks and dynamic non-backbone networks. In the field of ground networks, our college has gotten a lot of practical experience. Cooperating with HUAWEI, a composite network named "Innovative Wireless Campus Networks" has been built in our campus.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/spaceairground.html", "DETAIL")
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 Multi-hop ad-hoc networks
+            h5 Joint with Prof. Feng Yang
+            p In the areas with no infrastructure, our multi-hop ad-hoc networks can be applied to provide transmission between different nodes. The transmission rate can be higher than 10 Mbps, and the transmission range of a single hop is larger than 30 km. The network is self-organized, and nodes can be replaced at any time without impacting the stability of our network. With all the features above, our system can still work well in a complicated environment.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/multihop.html", "DETAIL")
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/multihop1.jpg")

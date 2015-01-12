@@ -1,0 +1,49 @@
+extends _base
+
+block vars
+   - var title = "Teaching"
+   - var body_id = "teaching"
+   - var footer_shaded = false
+
+block content
+   include _splash
+   include _navbar
+   .wrapper
+      section.row
+         h3.two.columns.text-right 1
+         article.ten.columns
+            h3 Mobile and Wireless Networks
+            h4 Graduate Course
+            ul
+               li Capacity of Wireless Networks
+               li Mobility of Adhoc Network
+               li Routing in MANET
+               li Cross Layer Design and Optimization
+               li Modeling of Medium Access Control
+               li Power and Rate Control
+   .wrapper.shaded
+      section.row
+         h3.two.columns.text-right 2
+         article.ten.columns
+            h3
+               a(href="teaching_stochastic.html") Stochastic Processes and Queueing Theorey
+            h4 Graduate Course
+            ul
+               li General Stochastic Processes
+               li Markov Processes
+               li Queueing Theory
+               li Joint Queueing and Game Theory
+   .wrapper
+      section.row
+         h3.two.columns.text-right 3
+         article.ten.columns
+            h3
+               a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/course_wireless/index.html") Wireless Communiations: Principles and Applications
+            h4 Undergraduate Core Course
+            ul
+               li Radio Propogation
+               li Cellular networks: 3G, 4G
+               li WLAN (802.11 Series)
+               li MANET (Mobile Ad-hoc Networks)
+               li Sensor Networks
+               li Satellite System

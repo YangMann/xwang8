@@ -1,0 +1,129 @@
+extends _base
+
+block vars
+   - var title = "Teaching - Stochastic Processes and Queueing Theory"
+   - var body_id = "teaching-stochastic"
+   - var footer_shaded = true
+
+block content
+   include _splash
+   include _navbar
+   .wrapper
+      section.row
+         table.twelve.columns.table.striped
+            thead
+               tr
+                  th(colspan=2) Stochastic Processes and Queueing Theory (Theoretical Course)
+            tbody
+               tr
+                  td Introduction
+                  td
+                     ol
+                        li Overview
+                           ul
+                              li Definition of Probability, Random Variable, Stochastic Process
+                              li Classification of Stochastic Processes
+                              li Overview of Queueing Theory
+               tr
+                  td Part I: Stochastic Processes Theory
+                  td
+                     ol(start=2)
+                        li Conditional Probability and Conditional Expections
+                           ul
+                              li Math Definition
+                              li Applications
+                        li Markov Processes and Poisson Process
+                           ul
+                              li Definition
+                              li Chapman-Kolmogorov Equations
+                              li Limiting Probability
+                              li Time Reversibility
+                              li Markov Decision Process
+                              li Kolmogorov Forward and Backward Equation
+                              li Definition of Exponential Distribution
+                              li Properties of Exponential Random Variable
+                              li Convolutions of Exponential Random Variable
+                              li Defintiation of Counting Process, Poisson
+                              li Properties of Poisson Process
+                              li Variations of Poisson Process (nonhomogenous, compound, conditional)
+                        li Renew Processes, Random Walk, Brownian Motion
+                           ul
+                              li Definition of Renewal Process
+                              li Distribution of N(t)
+                              li Wald's Equatioin
+                              li Insights of Renewal
+                              li Definition of Random Walk
+                              li Duality of Random Walk
+                              li Analyze Random Walk through Martingale
+                              li Applications to G/G/1 Queue
+                              li Definition of Brownian Motion Process
+                              li Hitting Times, Maximum Variable, and Arc Sine Law
+                              li Variations on Brownina Motion
+                                 ul
+                                    li Absorbed Brownian Motion
+                                    li Reflected Brownian Motion
+                                    li Geometric Brownian Motion
+                                    li Integrated Brownian Motion
+                              li Brownian Motion with drift
+                                 ul
+                                    li Analyze Brownian Motion through Martingale
+                              li Kolmogrov Differential Equations for Brownian Motion
+                        li Martingale Processes, Stationary Processes
+                            ul
+                               li Supper Martiginale, Sub Martingale
+                               li Fundamental Martingale Inequalities
+                               li Doob's Martingale Convergence Theorem
+                               li Definition of Stationary Process
+                               li Limiting Theorems and Ergodic Theory
+               tr
+                  td Part II: Queueing Theory
+                  td
+                     ol(start=6)
+                        li M/M/1, M/M/C, etc (Chapter 3)
+                        li M/Er/1, Er/M/1, etc (Chapter 4)
+                        li M/G/1 (Chapter 5)
+                        li G/M/1 (Chapter 6)
+                        li Priority Queue
+                        li G/G/1 (Chapter 8)
+                        li Queueing Networks (Jackson Networks, Wittle Networks)
+               tr
+                  td Project
+                  td Review Questa paper
+               tr
+                  td Final Exam
+                  td Cover All
+               tr
+                  td Textbooks
+                  td TBD
+               tr
+                  td References
+                  td
+                     ol
+                        li "Probability (Graduate Texts in Mathematics), second Edition", by A. N. Shiryaev
+                        li "Probability and Measure Theory, 3rd Edition", by Patrick Billingsley
+                        li "Probability and Measure Theory, second Endition", by Robert Ash. and C. A. Doleans
+                        li "Probability: Theory and Examples, 3rd Edition", Richard Durrett
+                        li "Introduction to Probability Models, 9th Edition", by Sheldon Ross
+                        li "Stochastic Processes", by Sheldon, Ross
+                        li "A First Course in Stochastic Processes", by Samuel Karlin and Howard M. Taylor
+                        li "A Second Course in Stochastic Processes", by Samuel Karlin and Howard M. Taylor
+                        li "Stochastic Processes", by J. L. Doob
+                        li "Principles of Random Walk", by Frank Spitzer
+                        li "Probability, Random Processes and Ergodic Properties", by Robert M. Gray
+                        li "Markov Chains and Stochastic Stability", by S. P. Meyn and R. L. Tweedie
+                        li "Queueing Systems, Vol I", by L. Kleinrock
+                        li "Queueing Systems, Vol II", by L. Kleinrock
+                        li "Queueing Analysis Vol 1: Vacation and Priority Systems", by Hideaki Takagi
+                        li "Queueing Analysis Vol 2: Finite Systems ", by Hideaki Takagi
+                        li "Queueing Analysis Vol 3:Discrete-Time Systems", by Hideaki Takagi
+                        li "Stochastic Differential Equations: An Introduction with Applications (Universitext)", by Bernt Oksendal
+               tr
+                  td Other Resources
+                  td
+                     ol
+                        li
+                           a(href="http://www.springerlink.com/(nvnikbqzan3wpt45g0z5nk45)/app/home/journal.asp?referrer=parent&backto=linkingpublicationresults,1:101752,1") Queueing Systems
+                        li
+                           a(href="http://www3.interscience.wiley.com/cgi-bin/jhome/37057") Naval Research Logistics
+                        li
+                           a(href="http://journals.cambridge.org/action/displayJournal?jid=PES") Probability in the Engineering and Informational Sciences

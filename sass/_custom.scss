@@ -152,10 +152,22 @@ footer {
   }
 }
 
+#publication {
+  header {
+    margin-bottom: 10px;
+  }
+}
+
 ul.dbtns {
   display: inline-block;
   overflow: hidden;
   li {
     float: left;
+  }
+}
+
+ol {
+  ul {
+    font-size: smaller;
   }
 }
