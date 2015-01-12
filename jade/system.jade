@@ -97,7 +97,8 @@ block content
    .wrapper.shaded
       section.row
          article.eight.columns
-            h3 Indoor Localization with a Crowdsourcing based Fingerprints Collecting (Joint with Prof. Hui Yu)
+            h3 Indoor Localization with a Crowdsourcing based Fingerprints Collecting
+            h5 Joint with Prof. Hui Yu
             p Fingerprint matching is adopted by a large family of indoor localization schemes, where collecting fingerprints is inevitable but all consuming. While the increasingly popular crowdsourcing based approach provides an opportunity to relieve the burden of fingerprints collecting, a number of formidable challenges for such an approach have yet been studied.
             p In this study, we propose a crowdsourcing based fingerprints collecting mechanism for indoor localization systems, where the important challenges including the large data amount, device heterogeneity and real time response are studied and resolved. With our approach, massive raw fingerprints will be divided into small clusters while diverse devices' uploaded fingerprints will be merged to overcome device heterogeneity, both of them will contribute to reduce response time. We build a mobile cloud testbed to verify our proposed scheme, and comprehensive real-world experiment results indicate that our scheme provides comparable localization accuracy.
             ul.dbtns
@@ -124,6 +125,9 @@ block content
             h3 Smart car and four-rotor aircraft experiment system
             p The smart cars are equipped with XILINX FPGA. The main control components are ZEDBORAD（XILINX Zynq 7000 FPGA，CORTEX-A9）or NEXYS3 （XILINX Spartan-6 FPGA， ARM CORTEX-M0）.Camera, wireless router, supersonic detector are also available. Functions such as video capture, video transmission, smartphone control can also be easily realized.
             p The size and weight of a four-rotor aircraft in our experiment system can be changed by restructuring. Flight controllers are used to operate the algorithm of flight attitude control. The aircrafts can act as the carriers for camera, acceleration sensor and other wireless sensors.
+            ul.dbtns
+               +li_btn("http://v.youku.com/v_show/id_XNjYxMjYxMTU2.html", "VIDEO")(btn_style="primary")
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/smartcar.html", "DETAIL")(btn_style="success")
          article.four.columns
             figure
                img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/smartcar.jpg")
@@ -143,4 +147,47 @@ block content
                +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/MIMO.htm", "DETAIL")(btn_style="success")
                +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/VSMC_MIMO.pdf", "PDF")
                +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/VSMC_MIMO.pptx", "PPT")(btn_style="danger")
-
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 SIP over IPv6
+            h5 Sponsored by Foxconn.com
+            p The Session Initiation Protocol (SIP) is used for controlling communication sessions such as voice and video calls over Internet Protocol (IP). However, most of existing SIP services are implemented over Internet Protocol v4 (IPv4). As the increasing deployment of Internet Protocol v6 (IPv6) network, it is becoming more urging to implement SIP that is compatible with both IPv4 and IPv6. This project designs a network architecture of SIP service, and proposes a way to implement SIP over IPv6 while at the same time keeping compatible with the IPv4. RTPProxy server in the network reencapsulates IPv6 traffic within IPv4 networks and vice versa, which does not require any modification on the user agent and is easy to be implemented.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/sip.html", "DETAIL")
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image004.jpg")
+   .wrapper
+      section.row
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image035.png")
+         article.eight.columns
+            h3 The combination of CMMB and cellular networks
+            h5 Joint with Prof. Hui Liu, and Prof. Manyuan Shen
+            p The hot videos on the Internet can be pushed to mobile terminals via CMMB. When a user wants to watch a video on his/her terminal, our app checks if the very video has been pushed by CMMB. If so, the local video will be played. Otherwise the terminal will play the video on line via cellular networks such as 3G or LTE. For the case that the file of video received through CMMB is corrupted, only the lost data segments will be downloaded through cellular network, and thus the data traffic is saved. It can be expected that the combination of CMMB and cellular networks can improve user experience significantly.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/cmmb.html", "DETAIL")
+   .wrapper.shaded
+      section.row
+         article.eight.columns
+            h3 Cognitive network experiment system
+            h5 Joint with Prof. Hui Yu and Prof. Xiaoying Gan
+            h5 Sponsored by Docomo.com and Fujitsu.com, NSF China, 973 Project etc
+            h4 Smart spectrum detection
+            p We have the ability to perform spectrum sensing, channel measurement in the frequency range IEEE802.11a/b/g (including MIMO channel), and wireless data transmission. These can support the cognitive wireless communication experiment in corresponding frequency band.
+            h4 WPAN (IEEE 802.15) development environment
+            p Real-time online simulator can be directly connected to the computer through the USB interface, performing some functions such as code downloads, online debugging.
+            h4 RFID-based multi-mode device
+            p This device consists of ARM embedded development borad, RFID reader module, GSM/GPRS module and WIFI network card, which can be used to recognize labels such as ISO15693, ISO14443, Tag-ItTM. This device has multi-tag reading ability, as well as being able to trafer data, authenticate user and download information through GSM/GPRS/WiFi networks automatically/manually. Based on this device, we can be further developed with multimode IntelliSense WPAN and WMAN interface Terminal and Verify that the Terminal model for CR.
+            h4 WPAN/WMAN/GPRS three mode terminal
+            p We set up a tri-mode terminal which has WiFi / WiMAX / GPRS three network access capability. We develop the basic communication protocol support software , basic network selection function , and the completion of a WiFi network physical layer, MAC layer , network layer information extraction.
+            ul.dbtns
+               +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/experimentsystem.html", "DETAIL")
+         article.four.columns
+            figure
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image017.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image019.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image023.png")
+               img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/research-system/Xinbing%20Wang's%20Homepage%20Research_files/image025.png")
