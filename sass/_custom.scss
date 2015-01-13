@@ -156,6 +156,9 @@ footer {
   header {
     margin-bottom: 10px;
   }
+  .wrapper + .wrapper {
+    padding-top: 0;
+  }
 }
 
 ul.dbtns {

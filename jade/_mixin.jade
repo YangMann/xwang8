@@ -24,3 +24,24 @@ mixin li_btn(href, name)
         else
             div.btn.default
                 a(target="_blank", href=href)=name
+
+mixin t_cite(authors, title, status, conference, misc, ...links)
+    if attributes.abbr
+        |<strong>[#{attributes.abbr}]</strong>
+    |  #{authors || ""}, <em>"#{title || ""},"</em> #{status || ""} <strong>#{conference || ""}</strong>, #{misc || ""}
+    each link in links
+        - if (link.title == undefined)
+            |  [<a href="#{link.url}">#{(link.url.substr(link.url.lastIndexOf('.') + 1).toUpperCase() || link.url)}</a>]
+        - else
+            |  [<a href="#{link.url}">#{link.title}</a>]
+
+mixin li_cite(authors, title, status, conference, misc, ...links)
+    li
+        if attributes.abbr
+            |<strong>[#{attributes.abbr}]</strong>
+        +t_cite(authors, title, status, conference, misc)
+        each link in links
+            - if (link.title == undefined)
+                |  [<a href="#{link.url}">#{(link.url.substr(link.url.lastIndexOf('.') + 1).toUpperCase() || link.url)}</a>]
+            - else
+                |  [<a href="#{link.url}">#{link.title}</a>]

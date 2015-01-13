@@ -1,21 +1,115 @@
 extends _base
 
 block vars
-   - var title = "Publication"
-   - var body_id = "publication"
-   - var footer_shaded = false
+    - var title = "Publication"
+    - var body_id = "publication"
+    - var footer_shaded = false
 
 block content
-   include _splash
-   include _navbar
-   .wrapper
-      section.row.text-center
-         header
-            h5 Talk Slides: "Spatial and Temporal Relationship for Stochastic Networks"
-               a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/spatial_and_temporal_networks_wxb.ppt")  [PPT]
-            h5 Monograph: "MotionCast for Mobile Wireless Networks," Springer Publisher, 2012.
-               a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/Monograph.pdf")  [PDF]
-         ul.dbtns
-            +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/publication_by_area.htm", "View by Area")(btn_style="warning")
-            +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/publication_date.htm", "View by Date")(btn_style="secondary")
-            +li_btn("http://scholar.google.com/citations?user=CT5yZbwAAAAJ&hl=en", "Google Scholar")(btn_style="primary")
+    include _splash
+    include _navbar
+    .wrapper
+        section.row.text-center
+            header
+                h5 Talk Slides: "Spatial and Temporal Relationship for Stochastic Networks"
+                    a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/spatial_and_temporal_networks_wxb.ppt")  [PPT]
+                h5 Monograph: "MotionCast for Mobile Wireless Networks," Springer Publisher, 2012.
+                    a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/Monograph.pdf")  [PDF]
+            ul.dbtns
+                +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/publication_by_area.htm", "View by Area")(btn_style="warning")
+                +li_btn("http://iwct.sjtu.edu.cn/Personal/xwang8/publication_date.htm", "View by Date")(btn_style="secondary")
+                +li_btn("http://scholar.google.com/citations?user=CT5yZbwAAAAJ&hl=en", "Google Scholar")(btn_style="primary")
+    .wrapper(style="padding-top: 0;")
+        section.row
+            h3.text-center Journal
+            ol
+                +li_cite("Q. Liang, Xinbing Wang, X. Tian, F. Wu, Q. Zhang",
+                "Two-Dimensional Route Switching in Cognitive Radio Networks: A Game-Theoretical Framework",
+                "to appear in",
+                "IEEE/ACM Transactions on Networking",
+                "2014. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2014.pdf", title:"PDF"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2014.ppt", title:"PPT"})(
+                abbr="TON"
+                )
+                +li_cite("S. Zhao, Xinbing Wang",
+                "Node Density and Delay in Large-Scale Wireless Networks with Unreliable Links",
+                "to appear in",
+                "IEEE/ACM Transactions on Networking",
+                "2013. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2013_2.pdf", title:"PDF"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiCom2011_slides.ppt", title:"PPT"})(
+                abbr="TON"
+                )
+                +li_cite("Y. Li, Q. Peng, Xinbing Wang",
+                "Multicast Capacity with Max-Min Fairness for Heterogeneous Networks",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol 22, no 2, pp. 622-635, 2014. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2013_1.pdf", title:"PDF"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2011_HCN_slides.ppt", title:"PPT"})(
+                abbr="TON"
+                )
+                +li_cite("J. Zhang, L. Fu, Xinbing Wang",
+                "Asymptotic Analysis on Secrecy Capacity in Large-Scale Wireless Networks",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol 22, no 1, pp. 66-79, 2014. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2013.pdf", title:"PDF"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2013.ppt", title:"PPT"})(
+                abbr="TON"
+                )
+                +li_cite("Xinbing Wang, X. Lin, Q. Wang, W. Luan",
+                "Mobility Increases the Connectivity of Wireless Networks",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol. 21, no. 2, pp. 440-454, 2013. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2012.pdf", title:"PDF"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiCom09.ppt", title:"PPT"})(
+                abbr="TON"
+                )
+                +li_cite("W. Huang, Xinbing Wang",
+                "Capacity Scaling of General Cognitive Networks",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol 20, no. 5, pp. 1501-1513, 2012. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2011_2.pdf", title:"PDF"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2011_CR_Capacity_slides.pdf", title:"PPT"})(
+                abbr="TON"
+                )
+                +li_cite("Xinbing Wang, L. Fu, C. Hu",
+                "Multicast Performance with Hierarchical Cooperation",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol 20, no 3, pp. 917-930, 2012. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2011_1.pdf"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2011_1_long.pdf", title:"longer version"})(
+                abbr="TON"
+                )
+                +li_cite("Xinbing Wang, W. Huang, S. Wang, J. Zhang, C. Hu",
+                "Delay and Capacity Tradeoff Analysis for MotionCast",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol. 19, no. 5, pp. 1354-1367, Oct 2011. (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON2011.pdf"},
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiHoc09.ppt"})(
+                abbr="TON"
+                )
+                +li_cite("D. Eun, Xinbing Wang",
+                "Achieving 100% Throughput in TCP/AQM under Aggressive Packet Marking with Small Buffer",
+                "in",
+                "IEEE/ACM Transactions on Networking",
+                "vol. 16, no. 4, pp: 945-956, August 2008. ",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TON08.pdf"})(
+                abbr="TON"
+                )
+                +li_cite("Xinbing Wang, S. Han, Y. Wu, X. Wang",
+                "Coverage and Energy Consumption Control in Mobile Heterogeneous Wireless Sensor Networks",
+                "in",
+                "IEEE Transactions on Automatic Control",
+                "vol. 58, no. 4, pp. 975-988, 2013 (regular paper). (Correspondence Author)",
+                {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TAC2012.pdf"})(
+                abbr="TAC"
+                )
+    .wrapper
+        h3.row.text-center Conference

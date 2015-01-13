@@ -1794,6 +1794,7 @@ footer #author a { color: #999999; }
 #projects table tr td:first-child { width: 14rem; }
 
 #publication header { margin-bottom: 10px; }
+#publication .wrapper + .wrapper { padding-top: 0; }
 
 ul.dbtns { display: inline-block; overflow: hidden; }
 ul.dbtns li { float: left; }
