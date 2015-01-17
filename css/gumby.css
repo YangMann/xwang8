@@ -1800,3 +1800,5 @@ ul.dbtns { display: inline-block; overflow: hidden; }
 ul.dbtns li { float: left; }
 
 ol ul { font-size: smaller; }
+
+#student-globe { height: 100%; background: url("../img/stars.jpg") no-repeat; background-size: cover; }
