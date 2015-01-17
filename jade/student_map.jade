@@ -10,6 +10,6 @@ block append scripts
    script(src="js/libs/webglearth2.min.js")
    script.
       $(function () {
-         var earth = new WE.map('student-globe', {atmosphere: true, proxyHost: '/proxy/'});
+         var earth = new WE.map('student-globe', {atmosphere: true});
          WE.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}').addTo(earth);
       });
