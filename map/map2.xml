@@ -1,0 +1,157 @@
+<info>
+		
+	<university>
+		<name>¨¦cole centrale Paris, France</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>centrale</photo>
+		<students>
+			<student>
+				<name>Chen Ge</name>
+				<photo>chenge</photo>
+				<intro>2013</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>QQ.com</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>qq</photo>
+		<students>
+			<student>
+				<name>Xie Changliang</name>
+				<photo>xiechangliang</photo>
+				<intro>2013</intro>
+			</student>
+			<student>
+				<name>Cui Jing</name>
+				<photo>cuijing</photo>
+				<intro>2012</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>PWC.com</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>pwc</photo>
+		<students>
+			<student>
+				<name>Qian Chunhua</name>
+				<photo>qianchuanhua</photo>
+				<intro>2013</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>Netease.com</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>netease</photo>
+		<students>
+			<student>
+				<name>Cheng Peng</name>
+				<photo>chengpeng</photo>
+				<intro>2013</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>Hua Wei Corp</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>huawei</photo>
+		<students>
+			<student>
+				<name>Ding Ben</name>
+				<photo>dingben</photo>
+				<intro>2012</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>ChinaMobile Corp</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>chinamobile</photo>
+		<students>
+			<student>
+				<name>Xu Pengchao</name>
+				<photo>xupengchao</photo>
+				<intro>2011</intro>
+			</student>
+			<student>
+				<name>Zhao Xing</name>
+				<photo>zhaoxing</photo>
+				<intro>2008</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>Sybase Corp</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>sybase</photo>
+		<students>
+			<student>
+				<name>Han Yun</name>
+				<photo>hanyun</photo>
+				<intro>2008</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>Spreadtrum Corp</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>spreadtrum</photo>
+		<students>
+			<student>
+				<name>Ji Cheng</name>
+				<photo>jicheng</photo>
+				<intro>2008</intro>
+			</student>
+		</students>
+	</university>
+	
+	<university>
+		<name>Intel, China</name>
+		<position>
+			<latitude></latitude>
+			<longitude></longitude>
+		</position>
+		<photo>intel</photo>
+		<students>
+			<student>
+				<name>Wu Yuan</name>
+				<photo>wuyuan</photo>
+				<intro>2007</intro>
+			</student>
+		</students>
+	</university>
+	
+</info>
