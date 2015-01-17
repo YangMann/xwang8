@@ -1,0 +1,196 @@
+<!doctype html>
+<!--Created by Yang ZHANG on 1/12/2015.
+--><!--[if lt IE 7]>
+<html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Xinbing Wang | Students</title><meta name="description" content="王新兵教授 Prof. Xinbing Wang"/>
+<meta name="keywords" content="王新兵 Prof. Xinbing Wang"/>
+<meta name="author" content="Yang ZHANG">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+<!-- Facebook Metadata /-->
+<meta property="fb:page_id" content=""/>
+<meta property="og:image" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content=""/>
+<!-- Google+ Metadata /-->
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+<meta itemprop="image" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss. However, there is a blank style.css in the css directory should you prefer -->
+<link rel="stylesheet" href="css/gumby.css">
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+<body id="student-map">
+  <div id="student-globe">
+    <div id="view-full">
+      <div style="float: left" class="btn info small"><a href="index.html">HOME</a></div>
+      <div style="float: left" class="btn default small"><a href="//iwct.sjtu.edu.cn/Personal/xwang8/students.htm" target="_blank">VIEW MY FULL STUDENT LIST</a></div>
+    </div>
+  </div>
+  <script>
+    var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+    if (!window.jQuery) {
+        if (!oldieCheck) {
+            document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+        } else {
+            document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+        }
+    }
+  </script>
+  <script gumby-touch="js/libs" src="js/libs/gumby.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/libs/webglearth2-custom.min.js"></script>
+  <script>
+    'use strict';
+    var markerList = [];
+    function label(name, lat, lnt, photo, students, earth) {
+        var photoDir = 'map/photo/';
+        var contentString = '<section class="row">' +
+                '<h6 class="ten columns text-center">' + name + '</h6>' +
+                '<figure class="two columns text-center">' +
+                '<img src="' + photoDir + photo + '.png">' +
+                '</figure>' +
+                '</section>';
+        $(students).find('student').each(function (index) {
+            if (index % 2 === 0) {
+                contentString += '<section class="row">'
+            }
+            contentString += '<div class="six columns">' +
+            '<h5>' + $(this).find('name').text() + '</h5>' +
+            '<figure><img src="' + photoDir + $(this).find('photo').text() + '.jpg"></figure>' +
+            '<span>' + $(this).find('intro').text() + '</span>' +
+            '</div>';
+            if ((index % 2 === 1) || (index + 1 == $(students).find('student').length)) {
+                contentString += '</section>';
+            }
+        });
+        contentString += '</section>'
+        markerList.push(WE.marker([lat, lnt]).addTo(earth).bindPopup(contentString));
+    }
+    function read(earth) {
+        $.ajax({
+            url: 'map/map.xml',
+            type: 'GET',
+            dataType: 'xml',
+            timeout: 1000,
+            success: function (xml) {
+                $(xml).find("university").each(function (i) {
+                    var name = $(this).children("name").text();
+                    var lat = $(this).children("position").children("latitude").text();
+                    var lon = $(this).children("position").children("longitude").text();
+                    var photo = $(this).children("photo").text();
+                    var students = $(this).children("students");
+                    label(name, lat, lon, photo, students, earth);
+                });
+                $(xml).find("university1").each(function (i) {
+                    var name = $(this).children("name").text();
+                    var lat = $(this).children("position").children("latitude").text();
+                    var lon = $(this).children("position").children("longitude").text();
+                    var photo = $(this).children("photo").text();
+                    var students = $(this).children("students");
+                    label(name, lat, lon, photo, students, earth);
+                });
+                $(xml).find("university2").each(function (i) {
+                    var name = $(this).children("name").text();
+                    var lat = $(this).children("position").children("latitude").text();
+                    var lon = $(this).children("position").children("longitude").text();
+                    var photo = $(this).children("photo").text();
+                    var students = $(this).children("students");
+                    label(name, lat, lon, photo, students, earth);
+                });
+            }
+        })
+    }
+    $(function () {
+        var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 4});
+        WE.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+                {
+                    attribution: 'Tiles \u00A9 Esri \u2014 Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+                }
+        ).addTo(earth);
+    
+        var lastTime = 0;
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+            window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+            window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
+            || window[vendors[x] + 'CancelRequestAnimationFrame'];
+        }
+    
+        if (!window.requestAnimationFrame)
+            window.requestAnimationFrame = function (callback, element) {
+                var currTime = new Date().getTime();
+                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                var id = window.setTimeout(function () {
+                            callback(currTime + timeToCall);
+                        },
+                        timeToCall);
+                lastTime = currTime + timeToCall;
+                return id;
+            };
+    
+        if (!window.cancelAnimationFrame)
+            window.cancelAnimationFrame = function (id) {
+                clearTimeout(id);
+            };
+    
+        var before = null;
+        var popupOpened = 0;
+        read(earth);
+        var animID = requestAnimationFrame(function animate(now) {
+            var c = earth.getPosition();
+            var elapsed = before ? now - before : 0;
+            before = now;
+            earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 60)]);
+            // console.log(earth.getCenter().toString());
+            requestAnimationFrame(animate);
+        });
+        $(document).find(".we-pp-close").on('click', function () {
+            popupOpened--;
+            if (popupOpened == 0) {
+                animID = requestAnimationFrame(function animate(now) {
+                    var c = earth.getPosition();
+                    var elapsed = before ? now - before : 0;
+                    before = now;
+                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 40)]);
+                    // console.log(earth.getCenter().toString());
+                    requestAnimationFrame(animate);
+                })
+            }
+        });
+        $(document).find('.we-pm-icon').on('click', function (event) {
+            // TODO: onclick binding is not working
+            popupOpened++;
+            console.log(popupOpened);
+            event.stopPropagation();
+            cancelAnimationFrame(animID);
+        });
+    });
+  </script><!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--<script>
+  window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+  Modernizr.load({
+  load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  });
+  </script>-->
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+  chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload', function () {
+  CFInstall.check({mode: 'overlay'})
+  })</script>
+  <![endif]-->
+</body></html>

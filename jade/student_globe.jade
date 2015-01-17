@@ -1,0 +1,141 @@
+extends _base
+
+block vars
+    - var title = "Students"
+    - var body_id = "student-map"
+block content
+    #student-globe
+        #view-full
+            .btn.info.small(style="float: left")
+                a(href="index.html") HOME
+            .btn.default.small(style="float: left")
+                a(href="//iwct.sjtu.edu.cn/Personal/xwang8/students.htm", target="_blank") VIEW MY FULL STUDENT LIST
+block foot
+block append scripts
+    script(src="js/libs/webglearth2-custom.min.js")
+    script.
+        'use strict';
+        var markerList = [];
+        function label(name, lat, lnt, photo, students, earth) {
+            var photoDir = 'map/photo/';
+            var contentString = '<section class="row">' +
+                    '<h6 class="ten columns text-center">' + name + '</h6>' +
+                    '<figure class="two columns text-center">' +
+                    '<img src="' + photoDir + photo + '.png">' +
+                    '</figure>' +
+                    '</section>';
+            $(students).find('student').each(function (index) {
+                if (index % 2 === 0) {
+                    contentString += '<section class="row">'
+                }
+                contentString += '<div class="six columns">' +
+                '<h5>' + $(this).find('name').text() + '</h5>' +
+                '<figure><img src="' + photoDir + $(this).find('photo').text() + '.jpg"></figure>' +
+                '<span>' + $(this).find('intro').text() + '</span>' +
+                '</div>';
+                if ((index % 2 === 1) || (index + 1 == $(students).find('student').length)) {
+                    contentString += '</section>';
+                }
+            });
+            contentString += '</section>'
+            markerList.push(WE.marker([lat, lnt]).addTo(earth).bindPopup(contentString));
+        }
+        function read(earth) {
+            $.ajax({
+                url: 'map/map.xml',
+                type: 'GET',
+                dataType: 'xml',
+                timeout: 1000,
+                success: function (xml) {
+                    $(xml).find("university").each(function (i) {
+                        var name = $(this).children("name").text();
+                        var lat = $(this).children("position").children("latitude").text();
+                        var lon = $(this).children("position").children("longitude").text();
+                        var photo = $(this).children("photo").text();
+                        var students = $(this).children("students");
+                        label(name, lat, lon, photo, students, earth);
+                    });
+                    $(xml).find("university1").each(function (i) {
+                        var name = $(this).children("name").text();
+                        var lat = $(this).children("position").children("latitude").text();
+                        var lon = $(this).children("position").children("longitude").text();
+                        var photo = $(this).children("photo").text();
+                        var students = $(this).children("students");
+                        label(name, lat, lon, photo, students, earth);
+                    });
+                    $(xml).find("university2").each(function (i) {
+                        var name = $(this).children("name").text();
+                        var lat = $(this).children("position").children("latitude").text();
+                        var lon = $(this).children("position").children("longitude").text();
+                        var photo = $(this).children("photo").text();
+                        var students = $(this).children("students");
+                        label(name, lat, lon, photo, students, earth);
+                    });
+                }
+            })
+        }
+        $(function () {
+            var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 4});
+            WE.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+                    {
+                        attribution: 'Tiles \u00A9 Esri \u2014 Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+                    }
+            ).addTo(earth);
+
+            var lastTime = 0;
+            var vendors = ['ms', 'moz', 'webkit', 'o'];
+            for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+                window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
+                || window[vendors[x] + 'CancelRequestAnimationFrame'];
+            }
+
+            if (!window.requestAnimationFrame)
+                window.requestAnimationFrame = function (callback, element) {
+                    var currTime = new Date().getTime();
+                    var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                    var id = window.setTimeout(function () {
+                                callback(currTime + timeToCall);
+                            },
+                            timeToCall);
+                    lastTime = currTime + timeToCall;
+                    return id;
+                };
+
+            if (!window.cancelAnimationFrame)
+                window.cancelAnimationFrame = function (id) {
+                    clearTimeout(id);
+                };
+
+            var before = null;
+            var popupOpened = 0;
+            read(earth);
+            var animID = requestAnimationFrame(function animate(now) {
+                var c = earth.getPosition();
+                var elapsed = before ? now - before : 0;
+                before = now;
+                earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 60)]);
+                // console.log(earth.getCenter().toString());
+                requestAnimationFrame(animate);
+            });
+            $(document).find(".we-pp-close").on('click', function () {
+                popupOpened--;
+                if (popupOpened == 0) {
+                    animID = requestAnimationFrame(function animate(now) {
+                        var c = earth.getPosition();
+                        var elapsed = before ? now - before : 0;
+                        before = now;
+                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 40)]);
+                        // console.log(earth.getCenter().toString());
+                        requestAnimationFrame(animate);
+                    })
+                }
+            });
+            $(document).find('.we-pm-icon').on('click', function (event) {
+                // TODO: onclick binding is not working
+                popupOpened++;
+                console.log(popupOpened);
+                event.stopPropagation();
+                cancelAnimationFrame(animID);
+            });
+        });
