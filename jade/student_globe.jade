@@ -115,14 +115,15 @@ block append scripts
 
             var before = null;
             var popupOpened = 0;
+            var animID;
             read(earth);
-            var animID = requestAnimationFrame(function animate(now) {
+            animID = requestAnimationFrame(function animate(now) {
                 var c = earth.getPosition();
                 var elapsed = before ? now - before : 0;
                 before = now;
                 earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 60)]);
                 // console.log(earth.getCenter().toString());
-                requestAnimationFrame(animate);
+                animID = requestAnimationFrame(animate);
             });
             $(document).find(".we-pp-close").on('click', function () {
                 popupOpened--;
@@ -133,15 +134,16 @@ block append scripts
                         before = now;
                         earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 40)]);
                         // console.log(earth.getCenter().toString());
-                        requestAnimationFrame(animate);
+                        animID = requestAnimationFrame(animate);
                     })
                 }
             });
-            $(document).find('.we-pm-icon').on('click', function (event) {
+            $(document).find('#student-globe').on('click', '.we-pm-icon', function (event) {
                 // TODO: onclick binding is not working
                 popupOpened++;
                 console.log(popupOpened);
                 event.stopPropagation();
+                console.log(animID);
                 cancelAnimationFrame(animID);
             });
         });
