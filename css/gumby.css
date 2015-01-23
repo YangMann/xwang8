@@ -1793,7 +1793,8 @@ footer #author a { color: #999999; }
 #projects h3 { text-align: right; }
 #projects table tr td:first-child { width: 14rem; }
 
-#publication header { margin-bottom: 10px; }
+#publication header, #publication-date header { margin-bottom: 10px; }
+
 #publication .wrapper + .wrapper { padding-top: 0; }
 
 ul.dbtns { display: inline-block; overflow: hidden; }

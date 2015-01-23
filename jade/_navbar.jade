@@ -4,9 +4,10 @@ div.navbar#nav(gumby-fixed="top")
       a.toggle(gumby-trigger!="#nav > .row > ul", href="#")
          i.icon-menu
       h1.logo.mobile
-         a(href="/")
+         a(href="index.html")
             img(src="img/SJTU-white@2x.png", alt="SJTU")
       ul.twelve.columns
+         +li_a("index.html", "Home")(span, i_pos="right", i="icon-home")
          +li_a("#", "Research")(span, i_pos="right", i="icon-graduation-cap")
             div.dropdown
                ul
@@ -23,11 +24,11 @@ div.navbar#nav(gumby-fixed="top")
             //            ul
             //               +li_a("", "nested")
          +li_a("service.html", "Professional Services")(span, i_pos="right", i="icon-briefcase")
-         +li_a("teaching.html", "Teaching")(span, i_pos="right", i="icon-book")
          +li_a("student_globe.html", "Students")(span, i_pos="right", i="icon-users")
          +li_a("#", "More")(span, i_pos="right", i="icon-dot-3")
             div.dropdown
                ul
+                  +li_a("teaching.html", "Teaching")(i_pos="right", i="icon-book")
                   +li_a("biography.html", "Biography")(i_pos="right", i="icon-user")
                   +li_a("//iwct.sjtu.edu.cn/Personal/xwang8/Photos.htm", "Photos")(i_pos="right", i="icon-picture")
                   +li_a("//iwct.sjtu.edu.cn/Personal/xwang8/links.htm", "Links")(i_pos="right", i="icon-link")

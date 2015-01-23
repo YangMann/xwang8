@@ -20,10 +20,16 @@ mixin li_btn(href, name)
     li
         if attributes.btn_style
             div.btn(class=attributes.btn_style)
-                a(target="_blank", href=href)=name
+                if attributes.open_in_current
+                    a(href=href)=name
+                else
+                    a(target="_blank", href=href)=name
         else
             div.btn.default
-                a(target="_blank", href=href)=name
+                if attributes.open_in_current
+                    a(href=href)=name
+                else
+                    a(target="_blank", href=href)=name
 
 mixin t_cite(authors, title, status, conference, misc, ...links)
     if attributes.abbr

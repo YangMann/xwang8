@@ -152,10 +152,13 @@ footer {
   }
 }
 
-#publication {
+#publication, #publication-date {
   header {
     margin-bottom: 10px;
   }
+}
+
+#publication {
   .wrapper + .wrapper {
     padding-top: 0;
   }
