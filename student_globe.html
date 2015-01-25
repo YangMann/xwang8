@@ -182,7 +182,6 @@
                 console.log("popup", popupOpened);
                 if (popupOpened == 0) {
                     animID = requestAnimationFrame(function animate(now) {
-                        console.log("HAHAHAHA");
                         var c = earth.getPosition();
                         var elapsed = before ? now - before : 0;
                         before = now;
