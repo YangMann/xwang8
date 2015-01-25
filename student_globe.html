@@ -161,31 +161,43 @@
             var c = earth.getPosition();
             var elapsed = before ? now - before : 0;
             before = now;
-            earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 60)]);
-            // console.log(earth.getCenter().toString());
+            earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
             animID = requestAnimationFrame(animate);
         });
-        $(document).find(".we-pp-close").on('click', function () {
+        $(document).find('#student-globe').on('click', '.we-pp-close', function (event) {
             popupOpened--;
             if (popupOpened == 0) {
                 animID = requestAnimationFrame(function animate(now) {
                     var c = earth.getPosition();
                     var elapsed = before ? now - before : 0;
                     before = now;
-                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 40)]);
-                    // console.log(earth.getCenter().toString());
+                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
                     animID = requestAnimationFrame(animate);
                 })
             }
         });
-        $(document).find('#student-globe').on('click', '.we-pm-icon', function (event) {
-            // TODO: onclick binding is not working
+        function markerListener() {
+            $(this).on('click', function (event) {
+                popupOpened--;
+                console.log("popup", popupOpened);
+                if (popupOpened == 0) {
+                    animID = requestAnimationFrame(function animate(now) {
+                        console.log("HAHAHAHA");
+                        var c = earth.getPosition();
+                        var elapsed = before ? now - before : 0;
+                        before = now;
+                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
+                        animID = requestAnimationFrame(animate);
+                    })
+                }
+                $(this).unbind(event);
+                // $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);
+            });
             popupOpened++;
-            console.log(popupOpened);
-            event.stopPropagation();
-            console.log(animID);
+            before = null;
             cancelAnimationFrame(animID);
-        });
+        }
+        $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);
     });
   </script><!-- Change UA-XXXXX-X to be your site's ID -->
   <!--<script>

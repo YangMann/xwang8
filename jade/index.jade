@@ -14,6 +14,7 @@ block content
             h2 Xinbing Wang 王新兵
             dl
                dd Distinguished Professor, Assistant Dean
+               dd Ph.D. Supervisor in both EE & CS Department
                dd School of Electronic, Information & Electrical Engineering
                dd Shanghai Jiao Tong University
             dl
@@ -22,8 +23,9 @@ block content
             dl
                dd Office: SEIEE Building 5-301A
                dd Email:
-                  a(href="mailto:xwang8@sjtu.edu.cn")  xwang8@sjtu.edu.cn <br>
-                  a(href="mailto:wang-xb@cs.sjtu.edu.cn")  wang-xb@cs.sjtu.edu.cn
+                  div(style="display: inline-table;")
+                     a(href="mailto:xwang8@sjtu.edu.cn")  xwang8@sjtu.edu.cn <br>
+                     a(href="mailto:wang-xb@cs.sjtu.edu.cn")  wang-xb@cs.sjtu.edu.cn
    .wrapper
       section.row#whats-new
          article.four.columns
@@ -31,58 +33,60 @@ block content
                img(src="img/home.updates.png" alt="What's new")
                h3 What's New
          article.eight.columns
-            table.striped#whats-new-table.
-               <tbody>
-               <tr>
-               <td>TPC for ACM MobiHoc 2015</td>
-               </tr>
-               <tr>
-               <td><a href="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/2014-xiamentravel.pdf">2014 Xiamen
-               travel's photo is available here</a></td>
-               </tr>
-               <tr>
-               <td>J. Zhang, L. Fu, X. Tian, Y. Cui, Xinbing Wang, "Analysis of Random Walk Mobility Models with
-               Location Heterogeneity," in IEEE Transactions on Parallel and Distributed Systems, 2014.
-               (Correspondence Author)[<a href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TPDS2014_1.pdf">PDF</a>]
-               </td>
-               </tr>
-               <tr>
-               <td>R. Jia, J. Zhang, F. Yang, X. Gan, X. Tian, P. Du, Xinbing Wang, "Throughput and Delay in
-               Heterogeneous Cognitive Radio Networks with Cooperative Secondary Users," in IEEE Transactions
-               on Parallel and Distributed Systems, 2014. (Correspondence Author)[<a
-               href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TPDS2014.pdf">PDF</a>]
-               </td>
-               </tr>
-               <tr>
-               <td>J. Luo, J. Zhang, L. Yu, Xinbing Wang, "Impact of Location Popularity on Throughput and Delay in
-               Mobile Ad Hoc Networks," in IEEE Transactions on Mobile Computing, 2014. (Correspondence
-               Author)[<a href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TMC2014.pdf">PDF</a>]
-               </td>
-               </tr>
-               <tr>
-               <td>R. Jia, K. Zheng, J. Zhang, L. Fu, P. Du, Xinbing Wang, J. Xu, "Asymptotic Analysis on
-               Throughput and Delay in Cognitive Social Networks," to appear in IEEE Transactions on
-               Communications, 2014. (Correspondence Author)[<a
-               href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/TCOM2014.pdf">PDF</a>]
-               </td>
-               </tr>
-               <tr>
-               <td>L. Fu, Xinbing Wang, P. R. Kumar, "Optimal determination of source-destination connectivity in
-               random graphs," in Proc. of ACM MobiHoc 2014, Philadelphia, PA, USA, Aug, 2014.(Correspondence
-               Author)[<a href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiHoc2014.pdf">PDF</a>][<a
-               href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiHoc2014_slides.ppt">PPT</a>]
-               </td>
-               </tr>
-               <tr>
-               <td>Y. Chen, J. Zhang, Xinbing Wang, X. Tian, W. Wu, F. Wu, C. W. Tan, "Secrecy Capacity Scaling of
-               Large-Scale Cognitive Networks," in Proc. of ACM MobiHoc 2014, Philadelphia, PA, USA, Aug,
-               2014.(Correspondence Author)[<a
-               href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiHoc2014_1.pdf">PDF</a>][<a
-               href="http://iwct.sjtu.edu.cn/Personal/xwang8/paper/MobiHoc2014_slides1.pptx">PPT</a>]
-               </td>
-               </tr>
-               <tr>
-               <td><a href="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.htm">Graduation 2014 photo is
-               uploaded</a></td>
-               </tr>
-               </tbody>
+            table.striped#whats-new-table
+               tbody
+                  tr
+                     td
+                        +t_cite("K. Sheng, Z. Gu, X. Mao, X. Tian, W. Wu, X. Gan, Xinbing Wang",
+                        "The Collocation of Measurement Points in Large Open Indoor Environment",
+                        "in",
+                        "Proc. of IEEE INFOCOM",
+                        "Hong Kong, China, Apr, 2015",
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_collocation.pdf"},
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_collocation_Tech.pdf", title:"Technical Report"},
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_collocation_slides.pptx", title:"Slides PPT"})
+                  tr
+                     td
+                        +t_cite("Q. Zhang, Y. Wen, X. Tian, X. Gan, Xinbing Wang",
+                        "Incentivize Crowd Labeling under Budget Constraint",
+                        "in",
+                        "Proc. of IEEE INFOCOM",
+                        "Hong Kong, China, Apr, 2015",
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_crowd.pdf"},
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_crowd_slides.pptx", title:"Slides PPT"})
+                  tr
+                     td
+                        +t_cite("C. Ma, W. Wu, Y. Cui, Xinbing Wang",
+                        "On the Performance of Successive Interference Cancellation in D2D-enabled Cellular Networks",
+                        "in",
+                        "Proc. of IEEE INFOCOM",
+                        "Hong Kong, China, Apr, 2015",
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_D2D.pdf"},
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_D2D_Tech.pdf", title:"Technical Report"},
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_D2D_slides.pdf", title:"Slides PPT"})
+                  tr
+                     td
+                        +t_cite("Y. Wen, X. Tian, Xinbing Wang, S. Lu",
+                        "Fundamental Limits of RSS Fingerprinting based Indoor Localization",
+                        "in",
+                        "Proc. of IEEE INFOCOM",
+                        "Hong Kong, China, Apr, 2015",
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_indoorlocalization.pdf"})
+                  tr
+                     td
+                        +t_cite("C. Kong, Z. Yuan, X. Han, F. Yang, Xinbing Wang, T. Wang, S. Lu",
+                        "VSMC MIMO: A Spectral Efficient Scheme for Cooperative Relay in Cognitive Radio Networks",
+                        "in",
+                        "Proc. of IEEE INFOCOM",
+                        "Hong Kong, China, Apr, 2015",
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_VSMC_MIMO.pdf"},
+                        {url:"http://iwct.sjtu.edu.cn/Personal/xwang8/paper/INFOCOM2015_VSMC_MIMO_slides.pptx", title:"Slides PPT"})
+                  tr
+                     td
+                        a(href="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.htm") Photo page is updated
+                  tr
+                     td Our Spark system webpage is available (<a href="//spark.sjtu.edu.cn">spark.sjtu.edu.cn</a>)
+                  tr
+                     td Our smart big data network webpage is available (<a href="//smartbdn.sjtu.edu.cn/index.html">smartbdn.sjtu.edu.cn</a>)
+                  tr
+                     td IEEE ComSoc Asia-Pacific Outstading Paper Award 2014
