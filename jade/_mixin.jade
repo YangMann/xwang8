@@ -1,14 +1,14 @@
 mixin li_a(href, name)
     li
         if attributes.span == true
-            a(class=attributes.class, href=href)
+            a(class=attributes.class, href=href, target=attributes.target)
                 if attributes.i_pos == "left"
                     i(class!=attributes.i)
                 span #{name}
                 if attributes.i_pos == "right"
                     i(class!=attributes.i)
         else
-            a(class=attributes.class, href=href)=name
+            a(class=attributes.class, href=href, target=attributes.target)=name
                 if attributes.i_pos == "left"
                     i(class!=attributes.i)
                 if attributes.i_pos == "right"
@@ -20,16 +20,10 @@ mixin li_btn(href, name)
     li
         if attributes.btn_style
             div.btn(class=attributes.btn_style)
-                if attributes.open_in_current
-                    a(href=href)=name
-                else
-                    a(target="_blank", href=href)=name
+                a(target=attributes.target, href=href)=name
         else
             div.btn.default
-                if attributes.open_in_current
-                    a(href=href)=name
-                else
-                    a(target="_blank", href=href)=name
+                a(target=attributes.target, href=href)=name
 
 mixin t_cite(authors, title, status, conference, misc, ...links)
     if attributes.abbr
@@ -37,9 +31,9 @@ mixin t_cite(authors, title, status, conference, misc, ...links)
     |  #{authors || ""}, <em>"#{title || ""},"</em> #{status || ""} <strong>#{conference || ""}</strong>, #{misc || ""}
     each link in links
         - if (link.title == undefined)
-            |  [<a href="#{link.url}">#{(link.url.substr(link.url.lastIndexOf('.') + 1).toUpperCase() || link.url)}</a>]
+            |  [<a target="_blank" href="#{link.url}">#{(link.url.substr(link.url.lastIndexOf('.') + 1).toUpperCase() || link.url)}</a>]
         - else
-            |  [<a href="#{link.url}">#{link.title}</a>]
+            |  [<a target="_blank" href="#{link.url}">#{link.title}</a>]
 
 mixin li_cite(authors, title, status, conference, misc, ...links)
     li
@@ -48,6 +42,6 @@ mixin li_cite(authors, title, status, conference, misc, ...links)
         +t_cite(authors, title, status, conference, misc)
         each link in links
             - if (link.title == undefined)
-                |  [<a href="#{link.url}">#{(link.url.substr(link.url.lastIndexOf('.') + 1).toUpperCase() || link.url)}</a>]
+                |  [<a target="_blank" href="#{link.url}">#{(link.url.substr(link.url.lastIndexOf('.') + 1).toUpperCase() || link.url)}</a>]
             - else
-                |  [<a href="#{link.url}">#{link.title}</a>]
+                |  [<a target="_blank" href="#{link.url}">#{link.title}</a>]
