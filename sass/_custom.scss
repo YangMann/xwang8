@@ -78,12 +78,11 @@ footer {
   @include respond("min-width: 720px") {
     background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom;
     background-size: contain;
-  }
-
-  &:hover figure[class="qr"] {
-    opacity: 1;
-    width: 300px;
-    height: 300px;
+    &:hover figure[class="qr"] {
+      opacity: 1;
+      width: 300px;
+      height: 300px;
+    }
   }
 
   .qr {
@@ -207,8 +206,10 @@ ol {
   left: 110%;
 }
 
-.dropdown li:hover {
-  +li[class="qr"] {
-    opacity: 1;
+@include respond("min-width: 720px") {
+  .dropdown li:hover {
+    + li[class="qr"] {
+      opacity: 1;
+    }
   }
 }
