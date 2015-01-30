@@ -39,6 +39,13 @@ footer {
   }
 }
 
+.footer {
+  @include respond("min-width: 720px") {
+    background: url("../img/qr-xwang8.png") no-repeat right bottom;
+    background-size: contain;
+  }
+}
+
 .splash {
   @include hidden(all-phones);
 
@@ -69,7 +76,6 @@ footer {
 
 .wrapper.shaded {
   background-color: #E9E9E9 !important;
-  background-size: cover;
 }
 
 #wxb_intro {
@@ -78,16 +84,6 @@ footer {
   @include respond("min-width: 720px") {
     background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom;
     background-size: contain;
-    &:hover figure[class="qr"] {
-      opacity: 1;
-      width: 300px;
-      height: 300px;
-    }
-  }
-
-  .qr {
-    left: -20%;
-    top: 30px;
   }
 
   text-align: center;

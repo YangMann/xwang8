@@ -1742,6 +1742,8 @@ footer { text-align: left; }
 footer #author { font-size: 10px; color: #cccccc; }
 footer #author a { color: #999999; }
 
+@media only screen and (min-width: 720px) { .footer { background: url("../img/qr-xwang8.png") no-repeat right bottom; background-size: contain; } }
+
 .splash { background: #4a4d50 url("../img/SJTU-white@2x.png") no-repeat 16% 16px; background-size: 160px; text-align: right; padding: 40px 0; min-height: 185px; }
 @media only screen and (max-width: 767px) { .splash { display: none !important; } }
 .splash h1, .splash h5 { color: #ffffff; font-weight: 300; }
@@ -1752,12 +1754,10 @@ footer #author a { color: #999999; }
 
 .wrapper { padding: 75px 20px 70px 20px; }
 
-.wrapper.shaded { background-color: #E9E9E9 !important; background-size: cover; }
+.wrapper.shaded { background-color: #E9E9E9 !important; }
 
 #wxb_intro { position: relative; text-align: center; }
-@media only screen and (min-width: 720px) { #wxb_intro { background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom; background-size: contain; }
-  #wxb_intro:hover figure[class="qr"] { opacity: 1; width: 300px; height: 300px; } }
-#wxb_intro .qr { left: -20%; top: 30px; }
+@media only screen and (min-width: 720px) { #wxb_intro { background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom; background-size: contain; } }
 #wxb_intro h1, #wxb_intro h2, #wxb_intro h3, #wxb_intro h4, #wxb_intro h5, #wxb_intro h6 { font-weight: 300; }
 #wxb_intro h2 { padding-bottom: .5rem; }
 #wxb_intro dl { margin-bottom: 1rem; }
