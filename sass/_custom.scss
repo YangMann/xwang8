@@ -39,6 +39,13 @@ footer {
   }
 }
 
+.footer {
+  @include respond("min-width: 720px") {
+    background: url("../img/qr-xwang8.png") no-repeat right bottom;
+    background-size: contain;
+  }
+}
+
 .splash {
   @include hidden(all-phones);
 
@@ -80,6 +87,13 @@ footer {
 }
 
 #wxb_intro {
+  position: relative;
+
+  @include respond("min-width: 720px") {
+    background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom;
+    background-size: contain;
+  }
+
   text-align: center;
 
   h1, h2, h3, h4, h5, h6 {
@@ -187,6 +201,20 @@ ol {
     position: fixed;
     top: 0;
     left: 0;
+  }
+}
+
+.qr {
+  opacity: 0;
+  position: absolute !important;
+  left: 110%;
+}
+
+@include respond("min-width: 720px") {
+  .dropdown li:hover {
+    + li[class="qr"] {
+      opacity: 1;
+    }
   }
 }
 
