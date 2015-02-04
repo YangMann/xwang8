@@ -16,6 +16,24 @@ mixin li_a(href, name)
         if block
             block
 
+mixin li_a_img(src)
+    if attributes.href
+        li
+            a(href=href)
+                if attributes.title
+                    img(src=src, alt=title)
+                    h3 #{title}
+                else
+                    img(src=src)
+    else
+        li
+            a(href="#")
+                if attributes.title
+                    img(src=src, alt=title)
+                    h3 #{attributes.title}
+                else
+                    img(src=src)
+
 mixin li_btn(href, name)
     li
         if attributes.btn_style
