@@ -83,7 +83,6 @@ footer {
 
 .wrapper.shaded {
   background-color: #E9E9E9 !important;
-  background-size: cover;
 }
 
 #wxb_intro {
@@ -490,4 +489,30 @@ ol {
 .grid li.shown img,
 .grid li.shown h3 {
   visibility: visible;
+}
+
+#photo-modal {
+  figure {
+    position: relative;
+  }
+  #photo-large {
+    opacity: .5;
+  }
+  #photo-large-loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &.loaded {
+    #photo-large {
+      opacity: 1;
+    }
+    #photo-large-loading {
+      display: none;
+    }
+  }
 }

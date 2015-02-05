@@ -98,7 +98,7 @@
 			this.curtain.style.background = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
 		}
 		this.anchor.appendChild( this.curtain );
-	}
+	};
 
 	GridItem.prototype.changeAnimationDelay = function( time ) {
 		if( this.curtain ) {
@@ -113,7 +113,7 @@
 			this.desc.style.WebkitAnimationDelay = time + 'ms';
 			this.desc.style.animationDelay = time + 'ms';
 		}
-	}
+	};
 
 	function GridScrollFx( el, options ) {	
 		this.el = el;
@@ -130,7 +130,7 @@
 		// if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport. 
 		// If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
 		viewportFactor : 0
-	}
+	};
 
 	GridScrollFx.prototype._init = function() {
 		var self = this, items = [];
@@ -178,14 +178,14 @@
 				if( self.itemsRenderedCount === self.itemsCount ) {
 					window.removeEventListener( 'scroll', onScrollFn, false );
 				}
-			}
+			};
 
 			// animate the items inside the viewport (on scroll)
 			window.addEventListener( 'scroll', onScrollFn, false );
 			// check if new items are in the viewport after a resize
 			window.addEventListener( 'resize', function() { self._resizeHandler(); }, false );
 		});
-	}
+	};
 
 	GridScrollFx.prototype._scrollPage = function() {
 		var self = this;
@@ -196,7 +196,7 @@
 				if( !item.curtain ) {
 					classie.add( item.el, 'shown' );
 					return;
-				};
+				}
 
 				classie.add( item.el, 'animate' );
 				
@@ -218,7 +218,7 @@
 			}
 		});
 		this.didScroll = false;
-	}
+	};
 
 	GridScrollFx.prototype._resizeHandler = function() {
 		var self = this;
@@ -230,7 +230,7 @@
 			clearTimeout( this.resizeTimeout );
 		}
 		this.resizeTimeout = setTimeout( delayed, 1000 );
-	}
+	};
 
 	// add to global namespace
 	window.GridScrollFx = GridScrollFx;

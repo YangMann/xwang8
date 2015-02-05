@@ -1756,7 +1756,7 @@ footer #author a { color: #999999; }
 
 .wrapper { padding: 75px 20px 70px 20px; }
 
-.wrapper.shaded { background-color: #E9E9E9 !important; background-size: cover; }
+.wrapper.shaded { background-color: #E9E9E9 !important; }
 
 #wxb_intro { position: relative; text-align: center; }
 @media only screen and (min-width: 720px) { #wxb_intro { background: url("http://iwct.sjtu.edu.cn/Personal/xwang8/index_files/xinbing_5.jpg") no-repeat right bottom; background-size: contain; } }
@@ -1890,3 +1890,9 @@ ol ul { font-size: smaller; }
 @keyframes showMe { from { visibility: hidden; }
   60%, 100% { visibility: visible; } }
 .grid li.shown img, .grid li.shown h3 { visibility: visible; }
+
+#photo-modal figure { position: relative; }
+#photo-modal #photo-large { opacity: .5; }
+#photo-modal #photo-large-loading { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+#photo-modal.loaded #photo-large { opacity: 1; }
+#photo-modal.loaded #photo-large-loading { display: none; }

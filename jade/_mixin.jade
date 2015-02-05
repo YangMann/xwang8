@@ -21,18 +21,32 @@ mixin li_a_img(src)
         li
             a(href=href)
                 if attributes.title
-                    img(src=src, alt=title)
-                    h3 #{title}
+                    if attributes.retina
+                        img(src=src, alt=attributes.title, data-retina=true)
+                        h3 #{attributes.title}
+                    else
+                        img(src=src, alt=attributes.title)
+                        h3 #{attributes.title}
                 else
-                    img(src=src)
+                    if attributes.retina
+                        img(src=src, data-retina=true)
+                    else
+                        img(src=src)
     else
         li
             a(href="#")
                 if attributes.title
-                    img(src=src, alt=title)
-                    h3 #{attributes.title}
+                    if attributes.retina
+                        img(src=src, alt=attributes.title, data-retina=true)
+                        h3 #{attributes.title}
+                    else
+                        img(src=src, alt=attributes.title)
+                        h3 #{attributes.title}
                 else
-                    img(src=src)
+                    if attributes.retina
+                        img(src=src, data-retina=true)
+                    else
+                        img(src=src)
 
 mixin li_btn(href, name)
     li
