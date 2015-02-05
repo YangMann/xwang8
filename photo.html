@@ -410,7 +410,7 @@
     $('#grid').find('a').click(function (e) {
         e.preventDefault();
         var modal = $("#photo-modal");
-        $(modal).removeClass("loaded");
+        modal.removeClass("loaded");
         var src = $(this).find('img').attr('src');
         if ($(this).find('img').attr('data-retina')) {
             var filename = src.replace(/^.*[\\\/]/, '');
