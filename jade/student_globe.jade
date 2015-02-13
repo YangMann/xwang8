@@ -6,10 +6,13 @@ block vars
 block content
     #student-globe
         #view-full
-            .btn.info.small(style="float: left")
-                a(href="index.html") HOME
-            .btn.default.small(style="float: left")
-                a(href="//iwct.sjtu.edu.cn/Personal/xwang8/students.htm", target="_blank") VIEW MY FULL STUDENT LIST
+            .btn.info.small
+                a(href="index.html") BACK TO HOME
+            .full-list
+                .row
+
+        #pause(data-pause="pause")
+            i.icon-pause
 block foot
 block append scripts
     style(scoped="scoped").
@@ -18,6 +21,7 @@ block append scripts
         .we-polydragger-a{position:absolute;width:8px;height:8px;z-index:100;margin-left:-4px;margin-top:-4px;background-color:#36f;cursor:pointer;border:1px solid blue;}
         .we-polydragger-b{position:absolute;width:6px;height:6px;z-index:99;margin-left:-3px;margin-top:-3px;background-color:rgba(180,220,250,0.9);cursor:pointer;border:1px solid blue;}
         .cesium-credit-textContainer:before{content:'WebGL Earth \2022\20 Cesium \2022\20';}
+        #pause{position:fixed;bottom:0;right:0;margin:40px;cursor:pointer;}#pause i{font-size:60px;color:white;}
     script(src="js/libs/webglearth2-custom.min.js")
     script.
         'use strict';
@@ -78,7 +82,16 @@ block append scripts
                         label(name, lat, lon, photo, students, earth);
                     });
                 }
-            })
+            });
+            $.ajax({
+                url: 'map/map_current.xml',
+                type: 'GET',
+                dataType: 'xml',
+                timeout: 1000,
+                success: function (xml) {
+                    console.log(xml);
+                }
+            });
         }
         $(function () {
             var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 4});
@@ -133,13 +146,13 @@ block append scripts
                         before = now;
                         earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
                         animID = requestAnimationFrame(animate);
-                    })
+                    });
                 }
             });
             function markerListener() {
                 $(this).on('click', function (event) {
                     popupOpened--;
-                    console.log("popup", popupOpened);
+                    // console.log("popup", popupOpened);
                     if (popupOpened == 0) {
                         animID = requestAnimationFrame(function animate(now) {
                             var c = earth.getPosition();
@@ -147,7 +160,7 @@ block append scripts
                             before = now;
                             earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
                             animID = requestAnimationFrame(animate);
-                        })
+                        });
                     }
                     $(this).unbind(event);
                     // $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);
@@ -157,4 +170,23 @@ block append scripts
                 cancelAnimationFrame(animID);
             }
             $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);
+            $("#pause").click(function (event) {
+                event.preventDefault();
+                if ($(this).attr("data-pause") === "pause") {
+                    cancelAnimationFrame(animID);
+                    $(this).find("i").removeClass("icon-pause").addClass("icon-play");
+                    before = null;
+                    $(this).attr("data-pause", "play");
+                } else if ($(this).attr("data-pause") === "play") {
+                    animID = requestAnimationFrame(function animate(now) {
+                        var c = earth.getPosition();
+                        var elapsed = before ? now - before : 0;
+                        before = now;
+                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
+                        animID = requestAnimationFrame(animate);
+                    });
+                    $(this).find("i").removeClass("icon-play").addClass("icon-pause");
+                    $(this).attr("data-pause", "pause");
+                }
+            });
         });

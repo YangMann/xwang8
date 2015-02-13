@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+	<group>
+        <name>Graduate</name>
+        <students>
+            <student>
+                <name>Fu Luoyi</name>
+                <photo>image001</photo>
+                <link>//iwct.sjtu.edu.cn/Personal/xwang8/research/FuLuoyi/</link>
+                <degree>Ph.D. Student</degree>
+                <time>2011 - </time>
+                <topic>Capacity of Social Networks</topic>
+                <email>&#121;&#105;&#108;&#117;&#111;&#102;&#117;&#064;&#115;&#106;&#116;&#117;&#046;&#101;&#100;&#117;&#046;&#099;&#110;</email>
+            </student>
+            <student>
+                <name>Luo Zhe</name>
+                <photo>image002</photo>
+                <joint>Prof. Hanwen Luo</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2010 - </time>
+                <topic>Capacity of Wireless Networks under Social Mobility</topic>
+                <email>&#115;&#104;&#097;&#122;&#104;&#111;&#117;&#122;&#104;&#101;&#120;&#117;&#101;&#064;&#115;&#105;&#110;&#097;&#046;&#099;&#111;&#109;</email>
+            </student>
+            <student>
+                <name>Zhang Jinbei</name>
+                <photo>image003</photo>
+                <degree>Ph.D. Student</degree>
+                <time>2010 - </time>
+                <topic>Security Capacity of Wireless Networks</topic>
+                <email>&#097;&#098;&#101;&#108;&#099;&#104;&#105;&#110;&#097;&#064;&#115;&#106;&#116;&#117;&#046;&#101;&#100;&#117;&#046;&#099;&#110;</email>
+            </student>
+            <student>
+                <name>Qin Yi</name>
+                <photo>image004</photo>
+                <joint>Prof. Hanwen Luo</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2011 - </time>
+                <topic>Capacity of Wireless Networks with Network Coding</topic>
+                <email>&#113;&#105;&#110;&#121;&#105;&#095;&#051;&#051;&#064;&#115;&#106;&#116;&#117;&#046;&#101;&#100;&#117;&#046;&#099;&#110;</email>
+            </student>
+        </students>
+    </group>
+</info>
