@@ -4,15 +4,15 @@ block vars
     - var title = "Students"
     - var body_id = "student-map"
 block content
-    #student-globe
+    #student-list
         #view-full
             .btn.info.small
                 a(href="index.html") BACK TO HOME
-            .full-list
-                .row
-
-        #pause(data-pause="pause")
-            i.icon-pause
+            #full-list
+    #student-globe-wrapper
+        #student-globe
+            #pause(data-pause="pause")
+                i.icon-pause
 block foot
 block append scripts
     style(scoped="scoped").
@@ -89,12 +89,37 @@ block append scripts
                 dataType: 'xml',
                 timeout: 1000,
                 success: function (xml) {
-                    console.log(xml);
+                    var html = '';
+                    var dir = 'student.files/';
+                    $(xml).find('group').each(function (i) {
+                        html += '<div class="row">' +
+                        '<h3>' + $(this).children('name').text() + '</h3>' +
+                        '</div>';
+                        $(this).children('students').find('student').each(function (j) {
+                            html += '<div class="row">' +
+                            '<h4>' + $(this).children('name').text() + '</h4>' +
+                            '<figure><img src="' + dir + $(this).children('photo').text() + '">' +
+                            '<figcaption>' + $(this).children('degree').text() + ' (' + $(this).children('time').text() +
+                            ')' + '</figcaption></figure>';
+                            if ($(this).children('joint').text()) {
+                                html += '<em>Joint with ' + $(this).children('joint').text() + '</em>';
+                            }
+                            html += '<dl><dt>Topic</dt><dd>'+ $(this).children('topic').text() +'</dd>';
+                            if ($(this).children('email').text()) {
+                                html += '<dt>Email</dt><dd>' + $(this).children('email').text() + '</dd>';
+                            }
+                            if ($(this).children('link').text()) {
+                                html += '<a href="' + $(this).children('link').text() + '">[Link]</a>';
+                            }
+                            html += '</dl></div>';
+                        });
+                    });
+                    $('#full-list').html(html);
                 }
             });
         }
         $(function () {
-            var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 4});
+            var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 3.6});
             WE.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
                     {
                         attribution: 'Tiles \u00A9 Esri \u2014 Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
