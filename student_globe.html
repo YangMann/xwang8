@@ -139,7 +139,7 @@
                     $(this).children('students').find('student').each(function (j) {
                         html += '<div class="row">' +
                         '<h4>' + $(this).children('name').text() + '</h4>' +
-                        '<figure><img src="' + dir + $(this).children('photo').text() + '">' +
+                        '<figure><img src="' + dir + $(this).children('photo').text() + '.jpg">' +
                         '<figcaption>' + $(this).children('degree').text() + ' (' + $(this).children('time').text() +
                         ')' + '</figcaption></figure>';
                         if ($(this).children('joint').text()) {
