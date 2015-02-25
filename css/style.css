@@ -1788,9 +1788,18 @@ ul.dbtns li { float: left; }
 
 ol ul { font-size: smaller; }
 
+#student-list { float: left; width: 25%; min-width: 320px; height: 100%; position: relative; overflow-y: scroll; }
+
+#view-full { top: 0; left: 0; }
+#view-full > .btn { position: fixed; }
+
+#full-list { padding-top: 21px; }
+#full-list .row { padding-top: 1em; padding-bottom: 1em; }
+#full-list .row:nth-child(even) { background-color: #e5e5e5; }
+
+#student-globe-wrapper { float: left; width: 75%; height: 100%; }
+
 #student-globe { height: 100%; background: url("../img/stars.jpg") no-repeat; background-size: cover; }
-#student-globe #view-full { position: fixed; top: 0; left: 0; max-width: 20%; }
-#student-globe #view-full > .btn { position: fixed; }
 
 .qr { opacity: 0; position: absolute !important; left: 110%; }
 
