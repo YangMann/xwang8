@@ -35,11 +35,17 @@
     <div id="view-full">
       <div class="btn info small"><a href="index.html">BACK TO HOME</a></div>
       <div id="full-list"></div>
+      <div id="expand" gumby-trigger="#student-expand-modal" class="switch"><i class="icon-resize-full"></i></div>
     </div>
   </div>
   <div id="student-globe-wrapper">
     <div id="student-globe">
       <div id="pause" data-pause="pause"><i class="icon-pause"></i></div>
+    </div>
+  </div>
+  <div id="student-expand-modal" class="modal">
+    <div class="content"><a href="//iwct.sjtu.edu.cn/Personal/xwang8/students.htm" target="_blank">[DEV]Full List</a><a gumby-trigger="|#student-expand-modal" title="Close" class="close switch"><i class="icon-cancel"></i></a>
+      <div></div>
     </div>
   </div>
   <script>
@@ -124,38 +130,71 @@
                 });
             }
         });
+        $(function () {
+            setTimeout(function () {
+                $("#expand").css('opacity', 0.2);
+            }, 4000);
+            $("#expand").mouseenter(function () {
+                $(this).css('opacity', 1);
+            }).mouseleave(function () {
+                $(this).css('opacity', 0.2);
+            });
+        });
         $.ajax({
             url: 'map/map_current.xml',
             type: 'GET',
             dataType: 'xml',
             timeout: 1000,
             success: function (xml) {
-                var html = '';
+                var html = '', html1 = '';
                 var dir = 'student.files/';
                 $(xml).find('group').each(function (i) {
-                    html += '<div class="row">' +
-                    '<h3>' + $(this).children('name').text() + '</h3>' +
-                    '</div>';
+                    var tmp = '';
+                    tmp += '<h3>' + $(this).children('name').text() + '</h3>';
+                    html += '<div class="row">' + tmp + '</div>';
+                    html1 += '<div class="row text-center">' + tmp + '</div>';
+                    var html1Flag = true;
                     $(this).children('students').find('student').each(function (j) {
-                        html += '<div class="row">' +
-                        '<h4>' + $(this).children('name').text() + '</h4>' +
-                        '<figure><img src="' + dir + $(this).children('photo').text() + '.jpg">' +
-                        '<figcaption>' + $(this).children('degree').text() + ' (' + $(this).children('time').text() +
-                        ')' + '</figcaption></figure>';
-                        if ($(this).children('joint').text()) {
-                            html += '<em>Joint with ' + $(this).children('joint').text() + '</em>';
+                        var tmp = '';
+                        tmp += '<h4>' + $(this).children('name').text() + '</h4><figure>';
+                        if ($(this).children('photo').text()) {
+                            tmp += '<img src="' + dir + $(this).children('photo').text() + '.jpg">';
                         }
-                        html += '<dl><dt>Topic</dt><dd>'+ $(this).children('topic').text() +'</dd>';
+                        tmp += '<figcaption>';
+                        if ($(this).children('degree').text()) {
+                            tmp += $(this).children('degree').text();
+                        }
+                        if ($(this).children('time').text()) {
+                            tmp += ' (' + $(this).children('time').text() + ')';
+                        }
+                        tmp += '</figure>' + '</figcaption>';
+                        if ($(this).children('joint').text()) {
+                            tmp += '<em>Joint with ' + $(this).children('joint').text() + '</em>';
+                        }
+                        tmp += '<dl><dt>Topic</dt><dd>'+ $(this).children('topic').text() +'</dd>';
                         if ($(this).children('email').text()) {
-                            html += '<dt>Email</dt><dd>' + $(this).children('email').text() + '</dd>';
+                            tmp += '<dt>Email</dt><dd>' + $(this).children('email').text() + '</dd>';
                         }
                         if ($(this).children('link').text()) {
-                            html += '<a href="' + $(this).children('link').text() + '">[Link]</a>';
+                            tmp += '<a href="' + $(this).children('link').text() + '">[Link]</a>';
                         }
-                        html += '</dl></div>';
+                        tmp += '</dl>';
+                        if (j % 3 === 0) {
+                            html1 += '<div class="row"><div class="four columns">' + tmp + '</div>';
+                            html1Flag = false;
+                        } else {
+                            html1 += '<div class="four columns">' + tmp + '</div>';
+                        }
+                        if (j % 3 === 2) {
+                            html1 += '</div>'
+                            html1Flag = true;
+                        }
+                        html += '<div class="row">' + tmp + '</div>';
                     });
+                    if (!html1Flag) html1 += '</div>';
                 });
                 $('#full-list').html(html);
+                $('#student-expand-modal').find('.content div').html(html1);
             }
         });
     }

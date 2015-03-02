@@ -31,12 +31,252 @@
             </student>
             <student>
                 <name>Qin Yi</name>
-                <photo>image004</photo>
+                <photo>image005</photo>
                 <joint>Prof. Hanwen Luo</joint>
                 <degree>Ph.D. Student</degree>
                 <time>2011 - </time>
                 <topic>Capacity of Wireless Networks with Network Coding</topic>
                 <email>&#113;&#105;&#110;&#121;&#105;&#095;&#051;&#051;&#064;&#115;&#106;&#116;&#117;&#046;&#101;&#100;&#117;&#046;&#099;&#110;</email>
+            </student>
+            <student>
+                <name>Feng Xinxin</name>
+                <photo>image006</photo>
+                <joint>Prof. Xiaoying Gan</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2010 - </time>
+                <topic>Energy Efficient Spectrum Allocation for Cognitive Radio Networks</topic>
+                <email>fxx1116@gmail.com</email>
+            </student>
+            <student>
+                <name>Zhang Meng</name>
+                <photo>image007</photo>
+                <joint>Prof. Hanwen Luo</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2010 - </time>
+                <topic>MotionCast Capacity of Wireless Networks</topic>
+                <email>mengzhang@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Ma Chuan</name>
+                <photo>image008</photo>
+                <joint>Prof. Hui Yu</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2012 - </time>
+                <topic>Cognitive Radio</topic>
+                <email>oknewkimi@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Sun Gaofei</name>
+                <photo>image009</photo>
+                <joint>Prof. Youyun Xu</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2009 - </time>
+                <topic>Cheating-against Spectrum Allocation for Cognitive Radio Networks</topic>
+                <email>sgf_hb@126.com</email>
+            </student>
+            <student>
+                <name>Zhang Su</name>
+                <photo>image010</photo>
+                <joint>Prof. Youyun Xu</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2012 - </time>
+                <topic>In-Network Computation</topic>
+                <email>zhangsu.delphi@163.com</email>
+            </student>
+            <student>
+                <name>Zheng Haifeng</name>
+                <photo>image011</photo>
+                <joint>Prof. Shilin Xiao</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2009 - </time>
+                <topic>Compressive Sensing for Wireless Networks</topic>
+                <email>zhenghf@fzu.edu.cn</email>
+            </student>
+            <student>
+                <name>Jia Riheng</name>
+                <photo>image012</photo>
+                <joint>Prof. Xiaoying Gan</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2012 - </time>
+                <topic>Cognitive Scaling</topic>
+                <email>dagejiariheng@yahoo.cn</email>
+            </student>
+            <student>
+                <name>Ma Songjun</name>
+                <photo>image013</photo>
+                <degree>Ph.D. Student</degree>
+                <time>2012 - </time>
+                <topic>Social Networks</topic>
+                <email>ezail.msj@gmail.com</email>
+            </student>
+            <student>
+                <name>Zheng Kechen</name>
+                <photo>image014</photo>
+                <joint>Prof. Xiaoying Gan</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2013 - </time>
+                <topic>Social Cognitive Scaling</topic>
+                <email>839594765@qq.com</email>
+            </student>
+            <student>
+                <name>Luo Jingjing</name>
+                <photo>image016</photo>
+                <degree>Ph.D. Student</degree>
+                <time>2012 - </time>
+                <topic>Capacity Scaling</topic>
+                <email>luojingjing1989@gmail.com</email>
+            </student>
+            <student>
+                <name>Liu Siyang</name>
+                <photo>image018</photo>
+                <joint>Prof. Feng Yang</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2013 - </time>
+                <topic>Smart phone</topic>
+                <email>sy4668933@126.com</email>
+            </student>
+            <student>
+                <name>Liu Xiaoying</name>
+                <photo>image020</photo>
+                <degree>Ph.D. Student</degree>
+                <time>2013 - </time>
+                <topic>Social Networks</topic>
+                <email>pursuit-lxy@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Liu Jiaqi</name>
+                <photo>image022</photo>
+                <degree>Ph.D. Student</degree>
+                <time>2014 - </time>
+                <topic>Social Computing</topic>
+                <email>13-liujiaqi@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Li Yuqing</name>
+                <photo>image024</photo>
+                <joint>Prof. Xiaoying Gan</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2014 - </time>
+                <topic>Network Economics</topic>
+                <email>liyuqing@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Wang Xiong</name>
+                <photo>image026</photo>
+                <joint>Prof. Yunfeng Guan</joint>
+                <degree>Ph.D. Student</degree>
+                <time>2014 - </time>
+                <topic>Mobile Computing Systems</topic>
+                <email>wangxiongsjtu@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Zhu Lina (visiting student)</name>
+                <photo>image028</photo>
+                <degree>Ph.D. Student</degree>
+                <time>2011 - </time>
+                <topic>IOV</topic>
+                <email>nanazln_fly@163.com</email>
+            </student>
+            <student>
+                <name>Yu Tuo</name>
+                <photo>image030</photo>
+                <degree>Master Student</degree>
+                <time>2012 - </time>
+                <topic>Smart Phone</topic>
+                <email>yutuo@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Zhou Zilong</name>
+                <photo>image031</photo>
+                <joint>Prof. Xiaoying Gan</joint>
+                <degree>Master Student</degree>
+                <time>2012 - </time>
+                <topic>Smart Phone</topic>
+                <email>2511@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Xiao Xin</name>
+                <photo>image032</photo>
+                <joint>Prof. Xiaoying Gan</joint>
+                <degree>Master Student</degree>
+                <time>2012 - </time>
+                <topic>Crowdsourcing</topic>
+                <email>mhthlxx@gmail.com</email>
+            </student>
+            <student>
+                <name>Chen Ge</name>
+                <photo>image034</photo>
+                <degree>Master Student</degree>
+                <time>2012 - </time>
+                <topic>Weibo data mining</topic>
+                <email>chenge@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Wang Tianyi</name>
+                <photo>image035</photo>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Smart Robot</topic>
+                <email>c86668248@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Wu You</name>
+                <photo>image037</photo>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Spark</topic>
+                <email>noyousjtu@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Zhu Siyu</name>
+                <photo>image039</photo>
+                <joint>Prof. Xiaohua Tian</joint>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Wearable Computing</topic>
+                <email>zhusy54@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Zhou Li</name>
+                <photo>image041</photo>
+                <joint>Prof. Xiaohua Tian</joint>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Wearable Computing</topic>
+                <email>sjtu_julian@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Zhao Yijin</name>
+                <photo>image043</photo>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Wearable Computing</topic>
+                <email>zhaoyijin3201@126.com</email>
+            </student>
+            <student>
+                <name>Shi Chaoran</name>
+                <photo>image045</photo>
+                <joint>Prof. Jing Liu</joint>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Big Data</topic>
+                <email>ericsin@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Yang Zhe</name>
+                <photo>image047</photo>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>Smart Robot</topic>
+                <email>youryz@sjtu.edu.cn</email>
+            </student>
+            <student>
+                <name>Areen Helou</name>
+                <photo>image049</photo>
+                <degree>Master Student</degree>
+                <time>2014 - </time>
+                <topic>SIPv6</topic>
+                <email>areen.helou@gmail.com</email>
             </student>
         </students>
     </group>

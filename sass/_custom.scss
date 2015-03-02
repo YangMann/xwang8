@@ -198,6 +198,50 @@ ol {
   height: 100%;
   position: relative;
   overflow-y: scroll;
+
+  #expand {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: $navbar-color;
+    @include transition(opacity, 0.2s);
+
+    i {
+      font-size: 60px;
+      line-height: 60px;
+      color: #ffffff;
+    }
+  }
+}
+
+#student-expand-modal {
+  .content {
+    width: 80%;
+    min-height: 60%;
+    max-height: 80%;
+    top: 10%;
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: none;
+
+      .columns {
+        padding: 20px;
+        background-color: #f8f8f8;
+
+        img {
+          float: right;
+        }
+      }
+    }
+  }
 }
 
 #view-full {
@@ -216,7 +260,7 @@ ol {
     padding-top: 1em;
     padding-bottom: 1em;
     &:nth-child(even) {
-      background-color : $table-stripe-bgcolor;
+      background-color: $table-stripe-bgcolor;
     }
   }
 }
@@ -335,20 +379,20 @@ ol {
 }
 
 .grid.swipe-right .curtain {
-  -webkit-transform: translate3d(-100%,0,0);
-  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 
 .grid.swipe-down .curtain {
-  -webkit-transform: translate3d(0,-100%,0);
-  transform: translate3d(0,-100%,0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
 .grid.swipe-rotate .curtain {
   width: 200%;
   height: 200%;
-  -webkit-transform: rotate3d(0,0,1,90deg);
-  transform: rotate3d(0,0,1,90deg);
+  -webkit-transform: rotate3d(0, 0, 1, 90deg);
+  transform: rotate3d(0, 0, 1, 90deg);
   -webkit-transform-origin: top left;
   transform-origin: top left;
 }
@@ -360,7 +404,7 @@ ol {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,1);
+  background: rgba(0, 0, 0, 1);
   content: '';
 }
 
@@ -400,7 +444,7 @@ ol {
   right: 0;
   bottom: 0;
   border: 0px solid transparent;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   content: '';
   -webkit-transition: border-width 0.2s, border-color 0.2s;
   transition: border-width 0.2s, border-color 0.2s;
@@ -409,8 +453,8 @@ ol {
 /* Hover effects */
 .grid li.shown:hover h3 {
   color: #fff;
-  -webkit-transform: translate3d(0,-30px,0);
-  transform: translate3d(0,-30px,0);
+  -webkit-transform: translate3d(0, -30px, 0);
+  transform: translate3d(0, -30px, 0);
 }
 
 .grid li.shown:hover > a::before {
@@ -422,38 +466,64 @@ ol {
 
 /* Swipe right */
 .grid.swipe-right li.animate .curtain {
-  -webkit-animation: swipeRight 1.5s cubic-bezier(0.6,0,0.4,1) forwards;
-  animation: swipeRight 1.5s cubic-bezier(0.6,0,0.4,1) forwards;
+  -webkit-animation: swipeRight 1.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+  animation: swipeRight 1.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
 }
 
 @-webkit-keyframes swipeRight {
-  0% {} /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
-  50%, 60% { -webkit-transform: translate3d(0,0,0); }
-  100% { -webkit-transform: translate3d(100%,0,0); }
+  0% {
+  }
+  /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
+  50%, 60% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
 }
 
 @keyframes swipeRight {
-  0% {}
-  50%, 60% { -webkit-transform: translate3d(0,0,0); transform: translate(0); }
-  100% { -webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0); }
+  0% {
+  }
+  50%, 60% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
 }
 
 /* Swipe down */
 .grid.swipe-down li.animate .curtain {
-  -webkit-animation: swipeDown 1.5s cubic-bezier(0.6,0,0.4,1) forwards;
-  animation: swipeDown 1.5s cubic-bezier(0.6,0,0.4,1) forwards;
+  -webkit-animation: swipeDown 1.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+  animation: swipeDown 1.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
 }
 
 @-webkit-keyframes swipeDown {
-  0% {} /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
-  50%, 60% { -webkit-transform: translate3d(0,0,0); }
-  100% { -webkit-transform: translate3d(0,100%,0); }
+  0% {
+  }
+  /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
+  50%, 60% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
 }
 
 @keyframes swipeDown {
-  0% {}
-  50%, 60% { -webkit-transform: translate(0); transform: translate(0); }
-  100% { transform: translate3d(0,100%,0); transform: translate3d(0,100%,0); }
+  0% {
+  }
+  50%, 60% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
 }
 
 /* Swipe rotate */
@@ -463,15 +533,28 @@ ol {
 }
 
 @-webkit-keyframes swipeRotate {
-  0% {} /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
-  50%, 60% { -webkit-transform: rotate3d(0,0,1,0deg); }
-  100% { -webkit-transform: rotate3d(0,0,1,-90deg); }
+  0% {
+  }
+  /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
+  50%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+  }
 }
 
 @keyframes swipeRotate {
-  0% {}
-  50%, 60% { -webkit-transform: rotate3d(0,0,1,0deg); transform: rotate3d(0,0,1,0deg); }
-  100% { -webkit-transform: rotate3d(0,0,1,-90deg); transform: rotate3d(0,0,1,-90deg); }
+  0% {
+  }
+  50%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+    transform: rotate3d(0, 0, 1, -90deg);
+  }
 }
 
 /* Shadow */
@@ -483,15 +566,26 @@ ol {
 }
 
 @-webkit-keyframes fadeOut {
-  0% {} /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
-  50%, 60% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+  }
+  /* fixes Chrome 35.0.1916.114 issue (easing breaks) */
+  50%, 60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeOut {
-  0% {}
-  50%, 60% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+  }
+  50%, 60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Hide image and title and show at half time */
@@ -507,13 +601,21 @@ ol {
 }
 
 @-webkit-keyframes showMe {
-  from { visibility: hidden; }
-  60%, 100% { visibility: visible; }
+  from {
+    visibility: hidden;
+  }
+  60%, 100% {
+    visibility: visible;
+  }
 }
 
 @keyframes showMe {
-  from { visibility: hidden; }
-  60%, 100% { visibility: visible; }
+  from {
+    visibility: hidden;
+  }
+  60%, 100% {
+    visibility: visible;
+  }
 }
 
 .grid li.shown img,
