@@ -280,4 +280,122 @@
             </student>
         </students>
     </group>
+    <group>
+        <name>Undergraduate</name>
+        <students>
+            <student>
+                <name>Liu Tianyuan</name>
+                <photo>image051</photo>
+                <topic>Smart Phone</topic>
+            </student>
+            <student>
+                <name>Gong Hongyu</name>
+                <photo>image053</photo>
+                <topic>EMST / Crowdsourcing</topic>
+            </student>
+            <student>
+                <name>Zhang Zhiyuan</name>
+                <photo>image055</photo>
+                <topic>Smart Terminal</topic>
+            </student>
+            <student>
+                <name>Liang Shiyu</name>
+                <photo>image057</photo>
+                <topic>Social</topic>
+            </student>
+            <student>
+                <name>Wang Tianyu</name>
+                <photo>image059</photo>
+                <topic>TNT</topic>
+            </student>
+            <student>
+                <name>Sheng Kaikai</name>
+                <photo>image061</photo>
+                <topic>Crowdsourcing</topic>
+            </student>
+            <student>
+                <name>Luo Ruotian</name>
+                <photo>image063</photo>
+            </student>
+            <student>
+                <name>Ge Xiaoyi</name>
+                <photo>image065</photo>
+                <topic>MAC</topic>
+            </student>
+            <student>
+                <name>You Jie</name>
+                <photo>image067</photo>
+                <topic>EMST</topic>
+            </student>
+            <student>
+                <name>Shen Ruofei</name>
+                <topic>Mobile Big Data</topic>
+            </student>
+            <student>
+                <name>Jiang Wanning</name>
+                <photo>image069</photo>
+                <topic>Big Data</topic>
+            </student>
+            <student>
+                <name>He Shan</name>
+                <photo>image071</photo>
+                <topic>Mobile Big Data</topic>
+            </student>
+            <student>
+                <name>Zhang Zhehui</name>
+                <photo>image073</photo>
+                <topic>Smart Car</topic>
+            </student>
+            <student>
+                <name>Sun Ruijia</name>
+                <photo>image075</photo>
+                <topic>Network Economics</topic>
+            </student>
+            <student>
+                <name>Zhu Xiaoguang</name>
+                <photo>image077</photo>
+                <topic>WiFi</topic>
+            </student>
+            <student>
+                <name>Peng Jinlong</name>
+                <photo>image079</photo>
+                <topic>WiFi</topic>
+            </student>
+            <student>
+                <name>Zhang Qi</name>
+                <photo>image081</photo>
+                <topic>Crowdsourcing</topic>
+            </student>
+            <student>
+                <name>Zhao Lutian</name>
+                <photo>image083</photo>
+                <topic>EMST</topic>
+            </student>
+            <student>
+                <name>Yuan Zengwen</name>
+                <photo>image085</photo>
+                <topic>Social Big Data</topic>
+            </student>
+            <student>
+                <name>Wang Kainan</name>
+                <photo>image087</photo>
+                <topic>Spark</topic>
+            </student>
+            <student>
+                <name>Gu Zhicheng</name>
+                <photo>image089</photo>
+                <topic>Crowdsourcing + OpenCV</topic>
+            </student>
+            <student>
+                <name>Wang Huiyu</name>
+                <photo>image091</photo>
+                <topic>Smart Phone</topic>
+            </student>
+            <student>
+                <name>Kong Chao</name>
+                <photo>image093</photo>
+                <topic>MIMO System</topic>
+            </student>
+        </students>
+    </group>
 </info>
