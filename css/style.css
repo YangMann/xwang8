@@ -1788,14 +1788,17 @@ ul.dbtns li { float: left; }
 
 ol ul { font-size: smaller; }
 
+#student-map dd { white-space: pre; word-break: break-word; }
+
 #student-list { float: left; width: 25%; min-width: 320px; height: 100%; position: relative; overflow-y: scroll; }
+#student-list img { float: right; max-width: 120px; }
 #student-list #expand { position: fixed; bottom: 0; left: 0; padding: 20px; margin: 20px; width: 100px; height: 100px; cursor: pointer; background-color: #4a4d50; -moz-transition: opacity, 0.2s; -o-transition: opacity, 0.2s; -webkit-transition: opacity, 0.2s; transition: opacity, 0.2s; }
 #student-list #expand i { font-size: 60px; line-height: 60px; color: #ffffff; }
 
-#student-expand-modal .content { width: 80%; min-height: 60%; max-height: 80%; top: 10%; }
+#student-expand-modal .content { width: 90%; min-height: 72%; max-height: 96%; top: 2%; }
 #student-expand-modal .content .row { margin-left: 0; margin-right: 0; margin-bottom: 20px; max-width: none; }
 #student-expand-modal .content .row .columns { padding: 20px; background-color: #f8f8f8; }
-#student-expand-modal .content .row .columns img { float: right; }
+#student-expand-modal .content .row .columns img { float: right; max-width: 150px; }
 
 #view-full { top: 0; left: 0; }
 #view-full > .btn { position: fixed; }

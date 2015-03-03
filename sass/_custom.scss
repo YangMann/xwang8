@@ -191,6 +191,13 @@ ol {
   }
 }
 
+#student-map {
+  dd {
+    white-space: pre;
+    word-break: break-word;
+  }
+}
+
 #student-list {
   float: left;
   width: 25%;
@@ -198,6 +205,11 @@ ol {
   height: 100%;
   position: relative;
   overflow-y: scroll;
+
+  img {
+    float: right;
+    max-width: 120px;
+  }
 
   #expand {
     position: fixed;
@@ -221,10 +233,10 @@ ol {
 
 #student-expand-modal {
   .content {
-    width: 80%;
-    min-height: 60%;
-    max-height: 80%;
-    top: 10%;
+    width: 90%;
+    min-height: 72%;
+    max-height: 96%;
+    top: 2%;
 
     .row {
       margin-left: 0;
@@ -238,6 +250,7 @@ ol {
 
         img {
           float: right;
+          max-width: 150px;
         }
       }
     }

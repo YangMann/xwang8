@@ -108,7 +108,7 @@ block append scripts
                 timeout: 1000,
                 success: function (xml) {
                     var html = '', html1 = '';
-                    var dir = 'student.files/';
+                    var dir = 'students.files/';
                     $(xml).find('group').each(function (i) {
                         var tmp = '';
                         tmp += '<h3>' + $(this).children('name').text() + '</h3>';
@@ -118,8 +118,14 @@ block append scripts
                         $(this).children('students').find('student').each(function (j) {
                             var tmp = '';
                             tmp += '<h4>' + $(this).children('name').text() + '</h4><figure>';
-                            if ($(this).children('photo').text()) {
-                                tmp += '<img src="' + dir + $(this).children('photo').text() + '.jpg">';
+                            var photo = $(this).children('photo').text();
+                            if (photo) {
+                                var photoArr = photo.split(".");
+                                if (photoArr[photoArr.length - 1] == "png") {
+                                    tmp += '<img src="' + dir + $(this).children('photo').text() + '">';
+                                } else {
+                                    tmp += '<img src="' + dir + $(this).children('photo').text() + '.jpg">';
+                                }
                             }
                             tmp += '<figcaption>';
                             if ($(this).children('degree').text()) {
