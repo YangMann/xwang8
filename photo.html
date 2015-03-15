@@ -156,7 +156,7 @@
           <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image042.jpg" alt="National Scholarship and Best Presentation Award Celebration, 2014" data-retina="data-retina"/>
               <h3>National Scholarship and Best Presentation Award Celebration, 2014</h3></a></li>
         <li class="title-box">
-          <h2><a href="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/2014-xiamentravel.pdf">Group Travel to Xiamen, Aug 2014</a></h2>
+          <h2><a href="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/2014-xiamentravel.pdf" target="_blank">Group Travel to Xiamen, Aug 2014</a></h2>
         </li>
           <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image048.jpg" alt="MobiHoc 2014, Aug 2014" data-retina="data-retina"/>
               <h3>MobiHoc 2014, Aug 2014</h3></a></li>
@@ -237,7 +237,7 @@
           <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image120.jpg" alt="Party for Zhang Jinbei’s first TON paper, March, 2013"/>
               <h3>Party for Zhang Jinbei’s first TON paper, March, 2013</h3></a></li>
         <li class="title-box">
-          <h2><a href="http://www.tudou.com/programs/view/TR3oneT6Nok/">Congratulation Video for Xinxin's marriage</a></h2>
+          <h2><a href="http://www.tudou.com/programs/view/TR3oneT6Nok/" target="_blank">Congratulation Video for Xinxin's marriage</a></h2>
         </li>
           <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image122.jpg" alt="Graduation, May 2012"/>
               <h3>Graduation, May 2012</h3></a></li>
@@ -408,23 +408,25 @@
         return output;
     }
     $('#grid').find('a').click(function (e) {
-        e.preventDefault();
-        var modal = $("#photo-modal");
-        modal.removeClass("loaded");
-        var src = $(this).find('img').attr('src');
-        if ($(this).find('img').attr('data-retina')) {
-            var filename = src.replace(/^.*[\\\/]/, '');
-            var fileno = filename.match(/([a-zA-Z]+)([0]*)([1-9]+[0-9]*)(.[a-zA-Z]+)/);
-            filename = fileno[1] + fileno[2] + leftPad(parseInt(fileno[3]) - 1, fileno[3].length) + fileno[4];
-            $('#photo-large').attr('src', 'Photos.files/' + filename);
-        } else {
-            $('#photo-large').attr('src', src);
+        if($(this).find('img').attr('src')) {
+            e.preventDefault();
+            var modal = $("#photo-modal");
+            modal.removeClass("loaded");
+            var src = $(this).find('img').attr('src');
+            if ($(this).find('img').attr('data-retina')) {
+                var filename = src.replace(/^.*[\\\/]/, '');
+                var fileno = filename.match(/([a-zA-Z]+)([0]*)([1-9]+[0-9]*)(.[a-zA-Z]+)/);
+                filename = fileno[1] + fileno[2] + leftPad(parseInt(fileno[3]) - 1, fileno[3].length) + fileno[4];
+                $('#photo-large').attr('src', 'Photos.files/' + filename);
+            } else {
+                $('#photo-large').attr('src', src);
+            }
+            $(modal).find('h3').text($(this).find('h3').text());
+            modal.addClass('active');
+            imagesLoaded(modal, function () {
+                $(modal).addClass("loaded");
+            });
         }
-        $(modal).find('h3').text($(this).find('h3').text());
-        modal.addClass('active');
-        imagesLoaded(modal, function () {
-            $(modal).addClass("loaded");
-        });
     });
   </script><!-- Change UA-XXXXX-X to be your site's ID -->
   <script>
