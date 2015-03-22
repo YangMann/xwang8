@@ -70,6 +70,39 @@
     </university>
 
     <university>
+    <name>University of California, Santa Barbara, US</name>
+    <position>
+        <latitude>34.413963</latitude>
+        <longitude>-119.848947</longitude>
+    </position>
+    <photo>ucsb</photo>
+    <students>
+        <student>
+            <name>Zhang Da</name>
+            <photo>zhangda</photo>
+            <intro>2014</intro>
+        </student>
+    </students>
+</university>
+
+    <university>
+        <name>Stony Brook University, US,</name>
+        <position>
+            <latitude>40.912376</latitude>
+            <longitude>-73.123389</longitude>
+        </position>
+        <photo>usb</photo>
+        <students>
+            <student>
+                <name>Zhou Pengzhan</name>
+                <photo>zhoupengzhan</photo>
+                <intro>2014</intro>
+            </student>
+        </students>
+    </university>
+
+
+    <university>
         <name>MIT, US</name>
         <position>
             <latitude>42.3596</latitude>
@@ -109,6 +142,16 @@
         </position>
         <photo>uiuc</photo>
         <students>
+            <student>
+                <name>Zhao Yiran</name>
+                <photo>zhaoyiran</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Yao Shuochao</name>
+                <photo>yaoshuochao</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Liu Weijie</name>
                 <photo>liuweijie</photo>
@@ -188,6 +231,11 @@
         <photo>stanford</photo>
         <students>
             <student>
+                <name>Li Hongquan</name>
+                <photo>lihongquan</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
                 <name>David Chiasson</name>
                 <photo>davidchiasson</photo>
                 <intro>2012</intro>
@@ -203,6 +251,21 @@
         </position>
         <photo>uta</photo>
         <students>
+            <student>
+                <name>Mao Xueyu</name>
+                <photo>maoxueyu</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Chen Yitao</name>
+                <photo>chenyitao</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Wang Qi</name>
+                <photo>wangqi</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Wang Xinyu</name>
                 <photo>wangxinyu</photo>
@@ -239,6 +302,11 @@
         </position>
         <photo>northwestern</photo>
         <students>
+            <student>
+                <name>Wang Xu</name>
+                <photo>wangxu</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Qu Zhengyang</name>
                 <photo>quzhengyang</photo>
@@ -380,6 +448,11 @@
         <photo>ucla</photo>
         <students>
             <student>
+                <name>Xiong Fengjia</name>
+                <photo>xiongfengjia</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
                 <name>Du Pengyuan</name>
                 <photo>dupengyuan</photo>
                 <intro>2013</intro>
@@ -442,6 +515,15 @@
         <photo>princeton</photo>
         <students>
             <student>
+                <name>Liu Yushan</name>
+                <photo>liuyushan</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Chen Yichen</name>
+                <photo>chenyichen</photo>
+                <intro>2014</intro>
+            </student>            <student>
                 <name>Wang Yun</name>
                 <photo>wangyun</photo>
                 <intro>2011</intro>
@@ -453,6 +535,8 @@
             </student>
         </students>
     </university>
+
+
 
     <university>
         <name>Carnegie Mellon University, US</name>
@@ -547,6 +631,11 @@
         <photo>git</photo>
         <students>
             <student>
+                <name>Liu Liang</name>
+                <photo>liuliang</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
                 <name>Yang Sen</name>
                 <photo>yangsen</photo>
                 <intro>2013</intro>
@@ -583,6 +672,12 @@
         </position>
         <photo>usc</photo>
         <students>
+
+            <student>
+                <name>Hu Yitao</name>
+                <photo>huyitao</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Qiu Hang</name>
                 <photo>qiuhang</photo>
@@ -635,6 +730,11 @@
         </position>
         <photo>osu</photo>
         <students>
+            <student>
+                <name>Xu Jiaqi</name>
+                <photo>xujiaqi</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Qian Zhenzhi</name>
                 <photo>qianzhenzhi</photo>
@@ -813,6 +913,11 @@
         </position>
         <photo>vtu</photo>
         <students>
+            <student>
+                <name>Liu Jinshan</name>
+                <photo>liujinshan</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Wang Lingyun</name>
                 <photo>wanglingyun</photo>
@@ -1034,6 +1139,16 @@
         <photo>sjtu</photo>
         <students>
             <student>
+                <name>Liu Jiaqi</name>
+                <photo>liujiaqi</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Yang Zhe</name>
+                <photo>yangzhe</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
                 <name>Liu Siyang</name>
                 <photo>liusiyang</photo>
                 <intro>2013</intro>
@@ -1096,7 +1211,31 @@
         </students>
     </university2>
 
-
+    <university2>
+        <name>Xidian University</name>
+        <position>
+            <latitude>34.121605</latitude>
+            <longitude>108.840431</longitude>
+        </position>
+        <photo>xidian</photo>
+        <students>
+            <student>
+                <name>Wang Liran</name>
+                <photo>wangliran</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Sun Tingting</name>
+                <photo>suntingting</photo>
+                <intro>2014</intro>
+            </student>
+            <student>
+                <name>Geng Xiaoyan</name>
+                <photo>gengxiaoyan</photo>
+                <intro>2014</intro>
+            </student>
+        </students>
+    </university2>
     <university2>
         <name>Hongkong University of Science and Technology, Hong Kong</name>
         <position>
@@ -1143,6 +1282,11 @@
         </position>
         <photo>tsinghua</photo>
         <students>
+            <student>
+                <name>Feng Xiao</name>
+                <photo>fengxiao</photo>
+                <intro>2014</intro>
+            </student>
             <student>
                 <name>Yang Zicao</name>
                 <photo>yangzicao</photo>
