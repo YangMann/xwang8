@@ -193,8 +193,8 @@
     <university>
         <name>Pennsylvania State University, US</name>
         <position>
-            <latitude>40.8012</latitude>
-            <longitude>-77.8606</longitude>
+            <latitude>39.9662034</latitude>
+            <longitude>-75.2118822</longitude>
         </position>
         <photo>psu</photo>
         <students>
@@ -1251,7 +1251,7 @@
             </student>
             <student>
                 <name>Zhang Yan</name>
-                <photo>zhangyan</photo>
+                <photo>zhangyan </photo>
                 <intro>2010</intro>
             </student>
         </students>
