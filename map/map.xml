@@ -193,8 +193,8 @@
     <university>
         <name>Pennsylvania State University, US</name>
         <position>
-            <latitude>40.8012</latitude>
-            <longitude>-77.8606</longitude>
+            <latitude>40.798213</latitude>
+            <longitude>-77.859908</longitude>
         </position>
         <photo>psu</photo>
         <students>
@@ -704,8 +704,8 @@
     <university>
         <name>University of Pennsylvania, US</name>
         <position>
-            <latitude>34.01989</latitude>
-            <longitude>-118.28604</longitude>
+            <latitude>39.952219</latitude>
+            <longitude>-75.193214</longitude>
         </position>
         <photo>pennsylvania</photo>
         <students>
