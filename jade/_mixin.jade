@@ -48,6 +48,17 @@ mixin li_a_img(src)
                     else
                         img(src=src)
 
+mixin li_stu_img_sch(src)
+    li
+        a(href="#")
+            img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/map/photo/"+attributes.school+".png",style="float: left",alt=attributes.title)
+            img(class="student_name", src=src, width=120,style="float: right", alt=attributes.title)
+            .student_blank
+            h3 #{attributes.title}
+
+
+
+
 mixin li_btn(href, name)
     li
         if attributes.btn_style

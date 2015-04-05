@@ -1824,6 +1824,10 @@ ol ul { font-size: smaller; }
 
 .grid li { display: inline-block; overflow: hidden; width: 314px; text-align: left; vertical-align: top; }
 
+.grid.student_list li { overflow: hidden; width: 314px; text-align: right; float: right; }
+
+.student_blank { float: right; width: 200px; height: 60px; }
+
 .js .grid li { display: none; float: left; }
 
 .js .grid.loaded li { display: block; }
