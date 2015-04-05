@@ -35,7 +35,11 @@ div.navbar#nav(gumby-fixed="top")
             //-            ul
             //-               +li_a("", "nested")
          +li_a("service.html", "Professional Services")(span, i_pos="right", i="icon-briefcase")
-         +li_a("student_globe.html", "Students")(span, i_pos="right", i="icon-users")
+         +li_a("#", "Students")(span, i_pos="right", i="icon-users")
+            div.dropdown
+               ul
+                  +li_a("student_list.html", "Student list")(i_pos="right", i="icon-book")
+                  +li_a("student_globe.html", "Student on map")(i_pos="right", i="icon-globe")
          +li_a("#", "More")(span, i_pos="right", i="icon-dot-3")
             div.dropdown
                ul
