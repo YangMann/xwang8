@@ -9,6 +9,11 @@
         <photo>ucsd</photo>
         <students>
             <student>
+                <name>Dai Ji</name>
+                <photo>daiji</photo>
+                <intro>2013</intro>
+            </student>
+            <student>
                 <name>Yin Ping</name>
                 <photo>yinping</photo>
                 <intro>2013</intro>
