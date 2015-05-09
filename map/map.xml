@@ -35,6 +35,11 @@
         <photo>northeastern</photo>
         <students>
             <student>
+                <name>Xie Jin</name>
+                <photo>008</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Liu Ran</name>
                 <photo>liuran</photo>
                 <intro>2013</intro>
@@ -124,6 +129,54 @@
     </university>
 
     <university>
+        <name>Toyota Technological Institute at Chicago</name>
+        <position>
+            <latitude>41.785342</latitude>
+            <longitude>-87.5939515</longitude>
+        </position>
+        <photo>ttic</photo>
+        <students>
+            <student>
+                <name>Luo Ruotian</name>
+                <photo>025</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
+    <university>
+        <name>University of Minnesota</name>
+        <position>
+            <latitude>44.97399</latitude>
+            <longitude>-93.227728</longitude>
+        </position>
+        <photo>umn</photo>
+        <students>
+            <student>
+                <name>Ma Haiwei</name>
+                <photo>026</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
+    <university>
+        <name>University of Arizona</name>
+        <position>
+            <latitude>32.231885</latitude>
+            <longitude>-110.950109</longitude>
+        </position>
+        <photo>ua</photo>
+        <students>
+            <student>
+                <name>Xiao Xin</name>
+                <photo>035</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
+    <university>
         <name>Cornell University, US</name>
         <position>
             <latitude>42.4486</latitude>
@@ -147,6 +200,31 @@
         </position>
         <photo>uiuc</photo>
         <students>
+            <student>
+                <name>Yu Tuo</name>
+                <photo>034</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Zhao Lutian</name>
+                <photo>031</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Gong Hongyu</name>
+                <photo>023</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Liu Tianyuan</name>
+                <photo>024</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Liang Shiyu</name>
+                <photo>011</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Zhao Yiran</name>
                 <photo>zhaoyiran</photo>
@@ -204,6 +282,11 @@
         <photo>psu</photo>
         <students>
             <student>
+                <name>Zheng Guanjie</name>
+                <photo>014</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Wu Yibo</name>
                 <photo>wuyibo</photo>
                 <intro>2012</intro>
@@ -257,6 +340,11 @@
         <photo>uta</photo>
         <students>
             <student>
+                <name>Yu Hangchen</name>
+                <photo>012</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Mao Xueyu</name>
                 <photo>maoxueyu</photo>
                 <intro>2014</intro>
@@ -308,6 +396,11 @@
         <photo>northwestern</photo>
         <students>
             <student>
+                <name>Zhou Hao</name>
+                <photo>030</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Wang Xu</name>
                 <photo>wangxu</photo>
                 <intro>2014</intro>
@@ -319,6 +412,23 @@
             </student>
         </students>
     </university>
+
+    <university>
+        <name>Duke University</name>
+        <position>
+            <latitude>36.001426</latitude>
+            <longitude>-78.938229</longitude>
+        </position>
+        <photo>duke</photo>
+        <students>
+            <student>
+                <name>Jiang Wanning</name>
+                <photo>013</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
 
     <university>
         <name>University of Maryland, College Park, US</name>
@@ -359,6 +469,16 @@
         </position>
         <photo>columbia</photo>
         <students>
+            <student>
+                <name>Li Xiaowen</name>
+                <photo>019</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Wang Qi</name>
+                <photo>010</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Lu Xin</name>
                 <photo>luxin</photo>
@@ -453,6 +573,36 @@
         <photo>ucla</photo>
         <students>
             <student>
+                <name>Wang Kainan</name>
+                <photo>027</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Zhang Yuxi</name>
+                <photo>028</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Yuan Zengwen</name>
+                <photo>022</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Dingzhou Yihai</name>
+                <photo>017</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Yao Chunnan</name>
+                <photo>016</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Wang Huiyu</name>
+                <photo>015</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Xiong Fengjia</name>
                 <photo>xiongfengjia</photo>
                 <intro>2014</intro>
@@ -498,6 +648,16 @@
         </position>
         <photo>cit</photo>
         <students>
+            <student>
+                <name>Sheng Kaikai</name>
+                <photo>003</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Sun Ruijia</name>
+                <photo>004</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Huang Wentao</name>
                 <photo>huangwentao</photo>
@@ -551,6 +711,26 @@
         </position>
         <photo>cmu</photo>
         <students>
+            <student>
+                <name>Zhang Yang</name>
+                <photo>029</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Shan Lixin</name>
+                <photo>005</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Ge Xiaoyi</name>
+                <photo>006</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Zhu Xiaoguang</name>
+                <photo>007</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Wang Xiao</name>
                 <photo>wangxiao</photo>
@@ -662,6 +842,11 @@
         <photo>ucd</photo>
         <students>
             <student>
+                <name>Chen Ji</name>
+                <photo>033</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Tang Huan</name>
                 <photo>tanghuan</photo>
                 <intro>2011</intro>
@@ -735,6 +920,11 @@
         </position>
         <photo>osu</photo>
         <students>
+            <student>
+                <name>Wang Tianyu</name>
+                <photo>032</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Xu Jiaqi</name>
                 <photo>xujiaqi</photo>
@@ -822,6 +1012,39 @@
     </university>
 
     <university>
+        <name>University of Oxford</name>
+        <position>
+            <latitude>51.756634</latitude>
+            <longitude>-1.254704</longitude>
+        </position>
+        <photo>oxford</photo>
+        <students>
+            <student>
+                <name>Wen Yutian</name>
+                <photo>020</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
+    <university>
+        <name>Peking University</name>
+        <position>
+            <latitude>39.986913</latitude>
+            <longitude>116.305874</longitude>
+        </position>
+        <photo>pku</photo>
+        <students>
+            <student>
+                <name>Zhang Zhiyuan</name>
+                <photo>021</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
+
+    <university>
         <name>NYU-Polytech University, US</name>
         <position>
             <latitude>40.69448</latitude>
@@ -850,6 +1073,16 @@
         </position>
         <photo>umaa</photo>
         <students>
+            <student>
+                <name>Zhang Qi</name>
+                <photo>001</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
+                <name>Kong Chao</name>
+                <photo>002</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Han Sihui</name>
                 <photo>hansihui</photo>
@@ -1144,6 +1377,11 @@
         <photo>sjtu</photo>
         <students>
             <student>
+                <name>Cao Weijian</name>
+                <photo>018</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Liu Jiaqi</name>
                 <photo>liujiaqi</photo>
                 <intro>2014</intro>
@@ -1270,6 +1508,11 @@
         </position>
         <photo>hku</photo>
         <students>
+            <student>
+                <name>Chen Xiangyu</name>
+                <photo>009</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Lv Zhiyi</name>
                 <photo>lvzhiyi</photo>

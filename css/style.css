@@ -1834,6 +1834,8 @@ ol ul { font-size: smaller; }
 
 .grid.student_alumni h4 { display: none; }
 
+.grid.student_list h4 { display: none; }
+
 .student_blank { float: right; width: 200px; height: 60px; }
 
 .alumni_blank { float: left; width: 100px; height: 190px; }

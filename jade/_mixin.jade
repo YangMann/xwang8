@@ -55,6 +55,7 @@ mixin li_stu_img_sch(src)
             img(class="student_name", src=src, width=120,style="float: right", alt=attributes.title)
             .student_blank
             h3 #{attributes.title}
+            h4 #{attributes.school} <br> #{attributes.mail}
 mixin li_alumni(src)
     li
         a(href="#")
@@ -62,7 +63,7 @@ mixin li_alumni(src)
             .alumni_blank
             img(class="student_name", src=src,style="float: right", alt=attributes.title)
             h3 #{attributes.title}
-            h4#fullschool #{attributes.fullschool} <br>  #{attributes.position}
+            h4 #{attributes.fullschool} <br>  #{attributes.position}
 
 
 
