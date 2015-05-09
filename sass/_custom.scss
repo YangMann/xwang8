@@ -277,6 +277,15 @@ ol {
     }
   }
 }
+#myword {
+  float: left;
+  color:black;
+
+}
+#alumni_description{
+  float:left;
+  text-align: center;
+}
 
 #student-globe-wrapper {
   float: left;
@@ -347,10 +356,15 @@ ol {
   //display: inline-block;
   overflow: hidden;
 
-  width: 800px;
+  width: 400px;
   text-align: right;
   float:right;
 
+}
+.grid.student_alumni h4 {
+  //display: inline-block;
+  //color: #ffffff;
+  display: none;
 }
 
 .student_blank{
@@ -360,9 +374,9 @@ ol {
 }
 
 .alumni_blank{
-  float: right;
-  width: 800px;
-  height: 60px;
+  float: left;
+  width: 100px;
+  height: 190px;
 }
 
 .js .grid li {
@@ -481,6 +495,24 @@ ol {
   -webkit-transition: -webkit-transform 0.2s, color 0.2s;
   transition: transform 0.2s, color 0.2s;
 }
+//.grid li h4 {
+//  position: absolute;
+//  bottom: 0;
+//  left: 0;
+//  margin: 0;
+//  padding: 20px;
+//  width: 100%;
+//  background: $navbar-color;
+//  color: #fff;
+//  text-align: right;
+//  text-transform: uppercase;
+//  letter-spacing: 1px;
+//  font-weight: 800;
+//  font-size: 1em;
+//  -webkit-transition: -webkit-transform 0.2s, color 0.2s;
+//  transition: transform 0.2s, color 0.2s;
+//}
+
 
 /* Pseudo element for hover effect */
 .grid li > a::before {
@@ -502,6 +534,7 @@ ol {
   -webkit-transform: translate3d(0, -30px, 0);
   transform: translate3d(0, -30px, 0);
 }
+
 
 .grid li.shown:hover > a::before {
   border-width: 14px;
@@ -639,9 +672,17 @@ ol {
 .js .grid li h3 {
   visibility: hidden;
 }
+.js .grid li h4 {
+  visibility: hidden;
+}
+
 
 .grid li.animate img,
 .grid li.animate h3 {
+  -webkit-animation: showMe 1.5s step-end forwards;
+  animation: showMe 1.5s step-end forwards;
+}
+.grid li.animate h4 {
   -webkit-animation: showMe 1.5s step-end forwards;
   animation: showMe 1.5s step-end forwards;
 }
@@ -666,6 +707,9 @@ ol {
 
 .grid li.shown img,
 .grid li.shown h3 {
+  visibility: visible;
+}
+.grid li.shown h4 {
   visibility: visible;
 }
 

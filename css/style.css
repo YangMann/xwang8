@@ -1807,6 +1807,10 @@ ol ul { font-size: smaller; }
 #full-list .row { padding-top: 1em; padding-bottom: 1em; }
 #full-list .row:nth-child(even) { background-color: #e5e5e5; }
 
+#myword { float: left; color: black; }
+
+#alumni_description { float: left; text-align: center; }
+
 #student-globe-wrapper { float: left; width: 75%; height: 100%; }
 
 #student-globe { height: 100%; background: url("../img/stars.jpg") no-repeat; background-size: cover; }
@@ -1826,11 +1830,13 @@ ol ul { font-size: smaller; }
 
 .grid.student_list li { overflow: hidden; width: 314px; text-align: right; float: right; }
 
-.grid.student_alumni li { overflow: hidden; width: 800px; text-align: right; float: right; }
+.grid.student_alumni li { overflow: hidden; width: 400px; text-align: right; float: right; }
+
+.grid.student_alumni h4 { display: none; }
 
 .student_blank { float: right; width: 200px; height: 60px; }
 
-.alumni_blank { float: right; width: 800px; height: 60px; }
+.alumni_blank { float: left; width: 100px; height: 190px; }
 
 .js .grid li { display: none; float: left; }
 
@@ -1911,13 +1917,19 @@ ol ul { font-size: smaller; }
 /* Hide image and title and show at half time */
 .js .grid li img, .js .grid li h3 { visibility: hidden; }
 
+.js .grid li h4 { visibility: hidden; }
+
 .grid li.animate img, .grid li.animate h3 { -webkit-animation: showMe 1.5s step-end forwards; animation: showMe 1.5s step-end forwards; }
+
+.grid li.animate h4 { -webkit-animation: showMe 1.5s step-end forwards; animation: showMe 1.5s step-end forwards; }
 
 @-webkit-keyframes showMe { from { visibility: hidden; }
   60%, 100% { visibility: visible; } }
 @keyframes showMe { from { visibility: hidden; }
   60%, 100% { visibility: visible; } }
 .grid li.shown img, .grid li.shown h3 { visibility: visible; }
+
+.grid li.shown h4 { visibility: visible; }
 
 #photo-modal figure { position: relative; }
 #photo-modal #photo-large { opacity: .5; }

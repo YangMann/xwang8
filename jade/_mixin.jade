@@ -50,20 +50,19 @@ mixin li_a_img(src)
 
 mixin li_stu_img_sch(src)
     li
-        if attributes.position
-            a(href="#")
-                img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/map/photo/"+attributes.school+".png",style="float: left",alt=attributes.title)
-                img(class="student_name", src=src,style="float: right", alt=attributes.title)
-                .alumni_blank
-                h3 #{attributes.title}
-
-        else
-            a(href="#")
-                img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/map/photo/"+attributes.school+".png",style="float: left",alt=attributes.title)
-                img(class="student_name", src=src, width=120,style="float: right", alt=attributes.title)
-                .student_blank
-                h3 #{attributes.title}
-
+        a(href="#")
+            img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/map/photo/"+attributes.school+".png",style="float: left",alt=attributes.title)
+            img(class="student_name", src=src, width=120,style="float: right", alt=attributes.title)
+            .student_blank
+            h3 #{attributes.title}
+mixin li_alumni(src)
+    li
+        a(href="#")
+            img(src="http://iwct.sjtu.edu.cn/Personal/xwang8/map/photo/" + attributes.school + ".png",style="float: left",alt=attributes.title)
+            .alumni_blank
+            img(class="student_name", src=src,style="float: right", alt=attributes.title)
+            h3 #{attributes.title}
+            h4#fullschool #{attributes.fullschool} <br>  #{attributes.position}
 
 
 

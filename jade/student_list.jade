@@ -18,18 +18,20 @@ block content
                   figure
                      img#photo-large(src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image001.jpg")
                      h3 Happy New Year Party of 2015/1/1
+                     h4 first desciprion
                      img#photo-large-loading(src="img/loading.gif")
+
       section.row.grid-wrap
          h2 Academia alumni
          ul.grid.student_alumni.swipe-right#student_alumni
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image291.jpg")(title="Gao Lin")(school="cuhk")(position="post-doc")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image208.jpg")(title="Zhang Guanglin")(school="donghua")(position="associate professor")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image348.png")(title="Zhou Liang")(school="nupt")(position="professor&assistant dean")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image316.jpg")(title="Li Dapeng")(school="nupt")(position="associate professor")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image011.jpg")(title="Zheng Haifeng")(school="fuzhou")(position="associate professor")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image006.jpg")(title="Feng Xinxin")(school="fuzhou")(position="lecturer")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image298.jpg")(title="Zhao Jun")(school="princeton")(position="post-doc")
-            +li_stu_img_sch("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image349.jpg")(title="Ouyang Wenzhuo")(school="rice")(position="post-doc")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image291.jpg")(title="Gao Lin")(school="cuhk")(position="Post-doctor")(fullschool="The Chinese University of Hong Kong")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image208.jpg")(title="Zhang Guanglin")(school="donghua")(position="Associate Professor")(fullschool="Donghua University")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image348.png")(title="Zhou Liang")(school="nupt")(position="Professor and Assistant dean")(fullschool="Nanjing University of Posts and Telecommunications")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image316.jpg")(title="Li Dapeng")(school="nupt")(position="Associate Professor")(fullschool="Nanjing University of Posts and Telecommunications")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image011.jpg")(title="Zheng Haifeng")(school="fuzhou")(position="Associate Professor")(fullschool="Fuzhou University")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image006.jpg")(title="Feng Xinxin")(school="fuzhou")(position="Lecturer")(fullschool="Fuzhou University")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image298.jpg")(title="Zhao Jun")(school="princeton")(position="Post-doctor")(fullschool="Princeton University")
+            +li_alumni("http://iwct.sjtu.edu.cn/Personal/xwang8/students.files/image349.jpg")(title="Ouyang Wenzhuo")(school="rice")(position="Post-doctor")(fullschool="Rice University")
 
          h2 Graduated in 2014
          ul.grid.student_list.swipe-right#student_2014
@@ -315,6 +317,7 @@ block append scripts
             var src = $(this).find('.student_name').attr('src');
             $('#photo-large').attr('src', src);
             $(modal).find('h3').text($(this).find('h3').text());
+            $(modal).find('h4').html($(this).find('h4').html());
             modal.addClass('active');
             imagesLoaded(modal, function () {
                $(modal).addClass("loaded");
