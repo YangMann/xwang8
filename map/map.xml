@@ -573,6 +573,11 @@
         <photo>ucla</photo>
         <students>
             <student>
+                <name>Ding Lei</name>
+                <photo>037</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Wang Kainan</name>
                 <photo>027</photo>
                 <intro>2015</intro>
@@ -841,6 +846,11 @@
         </position>
         <photo>ucd</photo>
         <students>
+            <student>
+                <name>Cheng Minhao</name>
+                <photo>036</photo>
+                <intro>2015</intro>
+            </student>
             <student>
                 <name>Chen Ji</name>
                 <photo>033</photo>
