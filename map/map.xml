@@ -429,6 +429,22 @@
         </students>
     </university>
 
+    <university>
+        <name>New York University</name>
+        <position>
+            <latitude>40.729513</latitude>
+            <longitude>-73.996461</longitude>
+        </position>
+        <photo>nyu</photo>
+        <students>
+            <student>
+                <name>Jiang Wanning</name>
+                <photo>013</photo>
+                <intro>2015</intro>
+            </student>
+        </students>
+    </university>
+
 
     <university>
         <name>University of Maryland, College Park, US</name>
