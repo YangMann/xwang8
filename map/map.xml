@@ -486,6 +486,11 @@
         <photo>columbia</photo>
         <students>
             <student>
+                <name>Xu Qi</name>
+                <photo>039</photo>
+                <intro>2015</intro>
+            </student>
+            <student>
                 <name>Li Xiaowen</name>
                 <photo>019</photo>
                 <intro>2015</intro>
