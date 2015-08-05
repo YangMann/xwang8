@@ -115,12 +115,12 @@
     </div>
     <section class="row grid-wrap">
       <ul id="grid" class="grid swipe-right">
-          <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image288.jpg" alt="Student Liu Tianyuan&amp;amp;Luo Ruotian@Tibet" data-retina="data-retina"/>
-              <h3>Student Liu Tianyuan&amp;amp;Luo Ruotian@Tibet</h3></a></li>
-          <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image286.jpg" alt="Student Liu Tianyuan&amp;amp;Luo Ruotian@Tibet" data-retina="data-retina"/>
-              <h3>Student Liu Tianyuan&amp;amp;Luo Ruotian@Tibet</h3></a></li>
-          <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image284.jpg" alt="Student Liu Tianyuan&amp;amp;Luo Ruotian@Tibet" data-retina="data-retina"/>
-              <h3>Student Liu Tianyuan&amp;amp;Luo Ruotian@Tibet</h3></a></li>
+          <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image288.jpg" alt="Student Liu Tianyuan and Luo Ruotian@Tibet" data-retina="data-retina"/>
+              <h3>Student Liu Tianyuan and Luo Ruotian@Tibet</h3></a></li>
+          <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image286.jpg" alt="Student Liu Tianyuan and Luo Ruotian@Tibet" data-retina="data-retina"/>
+              <h3>Student Liu Tianyuan and Luo Ruotian@Tibet</h3></a></li>
+          <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image284.jpg" alt="Student Liu Tianyuanand Luo Ruotian@Tibet" data-retina="data-retina"/>
+              <h3>Student Liu Tianyuanand Luo Ruotian@Tibet</h3></a></li>
           <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image282.jpg" alt="Student Zheng Kechen@Hakodate squid festival" data-retina="data-retina"/>
               <h3>Student Zheng Kechen@Hakodate squid festival</h3></a></li>
           <li><a href="#"><img src="http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image280.jpg" alt="Student Zheng Kechen@Hakodate squid festival" data-retina="data-retina"/>
@@ -527,7 +527,7 @@
             } else {
                 $('#photo-large').attr('src', src);
             }
-            $(modal).find('h3').text($(this).find('h3').text());
+            $(modal).find('h3').html($(this).find('h3').html());
             modal.addClass('active');
             imagesLoaded(modal, function () {
                 $(modal).addClass("loaded");

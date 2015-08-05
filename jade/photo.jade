@@ -19,9 +19,9 @@ block content
                             img#photo-large-loading(src="img/loading.gif")
         section.row.grid-wrap
             ul.grid.swipe-right#grid
-                +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image288.jpg")(retina=true, title="Student Liu Tianyuan&Luo Ruotian@Tibet")
-                +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image286.jpg")(retina=true, title="Student Liu Tianyuan&Luo Ruotian@Tibet")
-                +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image284.jpg")(retina=true, title="Student Liu Tianyuan&Luo Ruotian@Tibet")
+                +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image288.jpg")(retina=true, title="Student Liu Tianyuan and Luo Ruotian@Tibet")
+                +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image286.jpg")(retina=true, title="Student Liu Tianyuan and Luo Ruotian@Tibet")
+                +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image284.jpg")(retina=true, title="Student Liu Tianyuanand Luo Ruotian@Tibet")
                 +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image282.jpg")(retina=true, title="Student Zheng Kechen@Hakodate squid festival")
                 +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image280.jpg")(retina=true, title="Student Zheng Kechen@Hakodate squid festival")
                 +li_a_img("http://iwct.sjtu.edu.cn/Personal/xwang8/Photos.files/image278.jpg")(retina=true, title="Prof. Xiaojun Lin@Purdue's talk")
@@ -243,7 +243,7 @@ block append scripts
                 } else {
                     $('#photo-large').attr('src', src);
                 }
-                $(modal).find('h3').text($(this).find('h3').text());
+                $(modal).find('h3').html($(this).find('h3').html());
                 modal.addClass('active');
                 imagesLoaded(modal, function () {
                     $(modal).addClass("loaded");
