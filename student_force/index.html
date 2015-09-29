@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Academic Map</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" type="text/css" href="css/d3.slider.css">
+
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/d3.slider.js"></script>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/lineage.js"></script>
+
+</head>
+<body onLoad="start()">
+  <div id="year">2015</div>
+  <div id="viz"></div>
+  <div id="timeNavigation">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><a href="http://github.com/bengarvey/lineage">Lineage</a></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" class="checkbox-lg" id="musicOn"> Music
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" class="checkbox-lg" id="nightModeOn"> Night Mode
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-default" id="firstButton">First</button> 
+        <button class="btn btn-default" id="previousButton">Previous</button> 
+        <button class="btn btn-default" id="playButton">Play</button> 
+        <button class="btn btn-default" id="pauseButton">Pause</button> 
+        <button class="btn btn-default" id="nextButton">Next</button> 
+        <button class="btn btn-default" id="lastButton">Last</button> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="timeline" class="d3-slider d3-slider-horizontal"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon">
+            <input type="checkbox" id="lockSearch" checked="">
+          </span>
+          <input type="text" id="search" class="form-control input-lg"/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    </div>
+  </div>
+  <div id="memberDetails">
+    <div id="name"></div>
+  </div>
+
+</body>
+</html>
+

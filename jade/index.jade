@@ -33,9 +33,9 @@ block content
                      a(href!="mailto:&#119;&#097;&#110;&#103;&#045;&#120;&#098;&#064;&#099;&#115;&#046;&#115;&#106;&#116;&#117;&#046;&#101;&#100;&#117;&#046;&#099;&#110;")!="&#119;&#097;&#110;&#103;&#045;&#120;&#098;&#064;&#099;&#115;&#046;&#115;&#106;&#116;&#117;&#046;&#101;&#100;&#117;&#046;&#099;&#110;"
                dd Homepage:
                   div(style="display: inline-table;")
-                     a(href!="http://iwct.sjtu.edu.cn/Personal/xwang8/")!="http://iwct.sjtu.edu.cn/Personal/xwang8/"
+                     a#replace1(href!="http://iwct.sjtu.edu.cn/Personal/xwang8/")!="http://iwct.sjtu.edu.cn/Personal/xwang8/"
                      br
-                     a(href!="http://www.cs.sjtu.edu.cn/~wang-xb/")!="http://www.cs.sjtu.edu.cn/~wang-xb/"
+                     a#replace2(href!="http://www.cs.sjtu.edu.cn/~wang-xb/")!="http://www.cs.sjtu.edu.cn/~wang-xb/"
 
    .wrapper
       section.row#whats-new
@@ -148,4 +148,20 @@ block content
                      td Our Spark system webpage is available (<a href="//spark.sjtu.edu.cn">spark.sjtu.edu.cn</a>)
                   tr
                      td Our smart big data network webpage is available (<a href="//smartbdn.sjtu.edu.cn/index.html">smartbdn.sjtu.edu.cn</a>)
-
+block append scripts
+   script.
+      var current_path = window.location.href;
+      var $replace1 = $('#replace1');
+      var $replace2 = $('#replace2')
+      if (current_path.indexOf("iwct")>0) {
+         $replace1.html('http://iwct.sjtu.edu.cn/Personal/xwang8/')
+         $replace1.attr('href', 'http://iwct.sjtu.edu.cn/Personal/xwang8/')
+         $replace2.html('http://www.cs.sjtu.edu.cn/~wang-xb/')
+         $replace2.attr('href', 'http://www.cs.sjtu.edu.cn/~wang-xb/')
+      }
+      else {
+         $replace2.html('http://iwct.sjtu.edu.cn/Personal/xwang8/')
+         $replace2.attr('href', 'http://iwct.sjtu.edu.cn/Personal/xwang8/')
+         $replace1.html('http://www.cs.sjtu.edu.cn/~wang-xb/')
+         $replace1.attr('href', 'http://www.cs.sjtu.edu.cn/~wang-xb/')
+      }
