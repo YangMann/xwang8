@@ -9,8 +9,12 @@ sub {
   vertical-align: sub;
   font-size: smaller;
 }
+body#123{
+
+}
 
 body#home {
+
   font-weight: $font-weight-regular;
   text-align: center;
 
@@ -27,10 +31,7 @@ body#home {
   }
 }
 
-embed#index_video{
-  height: 400px;
-  width: 100%;
-}
+
 footer {
   text-align: left;
   #author {

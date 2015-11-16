@@ -1738,8 +1738,6 @@ body#home h1, body#home h2, body#home h3, body#home h4, body#home h5, body#home 
 body#home h2 { padding-bottom: .5em; }
 body#home li { text-align: left; }
 
-embed#index_video { height: 400px; width: 100%; }
-
 footer { text-align: left; }
 footer #author { font-size: 10px; color: #cccccc; }
 footer #author a { color: #999999; }
