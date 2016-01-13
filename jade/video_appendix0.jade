@@ -1,0 +1,26 @@
+extends _base
+
+
+
+block vars
+   - var title = "Video"
+   - var body_id = "appendix_video0"
+   - var footer_shaded = true
+
+
+
+block content
+   include _splash
+   include _navbar
+   .wrapper
+      section.row.padding_down
+         article.eleven.columns.centered
+            h3 MiraCode: Multi-color Barcode Streaming with Hue-based Color Selection
+       section.row
+         article.eight.columns.centered
+            video(src="http://www.cs.sjtu.edu.cn/~wang-xb/MiraCode.mp4"  height="360px" controls="controls")
+         article.one.columns.centered
+             a(href="http://www.cs.sjtu.edu.cn/~wang-xb/video/MiraCode.mp4") Download
+          article.eight.columns.centered
+              h5 MiraCode is a visible light communication system via screen-to-camera links. The file transmission rate of other similar systems are restricted by the limited capacity of barcode. Compared with these systems, MiraCode uses more colors than any of them to improve the file transmission rate. <br/>However, using more colors will increase the difficulty in the decoding process, such as lower recognition accuracy. To improve the recognition accuracy, we propose a new color selection algorithm, where any number of colors can be identified with equal distinction. A reference color based recognition algorithm is also proposed. <br/>Moreover, we prove that using 16 colors in MiraCode achieves the maximum capacity when the tradeoff between the number of colors and color recognition accuracy is considered. By studying the influence factors of frame synchronization, we provide a tradeoff between frame rates and calculation complexity. Our evaluation results show that the unit block transmission rate of MiraCode is more than twice as that of COBRA and RDCode.
+
