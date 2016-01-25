@@ -1,330 +1,1 @@
-<!doctype html>
-<!--Created by Yang ZHANG on 1/12/2015.
---><!--[if lt IE 7]>
-<html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if IE 9]>
-<html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Xinbing Wang | Students location</title><meta name="keywords" content="王新兵 Prof. Xinbing Wang"/>
-<meta name="author" content="Yang ZHANG <&#122;&#104;&#097;&#110;&#103;&#121;&#097;&#110;&#103;&#057;&#051;&#064;&#114;&#111;&#099;&#107;&#101;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;>">
-<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
-<!-- Facebook Metadata /-->
-<meta property="fb:page_id" content=""/>
-<meta property="og:image" content=""/>
-<meta property="og:description" content=""/>
-<meta property="og:title" content=""/>
-<!-- Google+ Metadata /-->
-<meta itemprop="name" content="">
-<meta itemprop="description" content="">
-<meta itemprop="image" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss. However, there is a blank style.css in the css directory should you prefer -->
-<link rel="stylesheet" href="css/style.css">
-<script src="js/libs/modernizr-2.6.2.min.js"></script>
-</head>
-<body id="student-map" onload="changeSize()">
-  <div id="student-list">
-    <div id="view-full">
-      <div class="btn info small"><a href="index.html">BACK TO HOME</a></div>
-      <div id="full-list"></div>
-      <div id="expand" gumby-trigger="#student-expand-modal" class="switch"><i class="icon-resize-full"></i></div>
-    </div>
-  </div>
-  <div id="student-globe-wrapper">
-    <div id="student-globe">
-      <div id="pause" data-pause="pause"><i class="icon-pause"></i></div>
-    </div>
-  </div>
-  <div id="student-expand-modal" class="modal">
-    <div class="content"><a href="//iwct.sjtu.edu.cn/Personal/xwang8/students.htm" target="_blank">[DEV]Full List</a><a gumby-trigger="|#student-expand-modal" title="Close" class="close switch"><i class="icon-cancel"></i></a>
-      <div></div>
-    </div>
-  </div>
-  <script>
-    var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
-    if (!window.jQuery) {
-        if (!oldieCheck) {
-            document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
-        } else {
-            document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
-        }
-    }
-  </script>
-  <script gumby-touch="js/libs" src="js/libs/gumby.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <style scoped="scoped">
-    .we-pp-content p{margin:18px 0; text-align:justify;}.we-pp-wrapper{padding:1px;text-align:left;border-radius:1px;}.we-pp{z-index:100;-webkit-transition:opacity 0.2s linear;-moz-transition:opacity 0.2s linear;-o-transition:opacity 0.2s linear;transition:opacity 0.2s linear;position:absolute;}.we-pp-wrapper,.we-pp-tip{background:white;box-shadow:0 1px 10px #888;-moz-box-shadow:0 1px 10px #888;-webkit-box-shadow:0 1px 14px #999;}.we-pp-close{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAk1BMVEX////Ny8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8sw0horAAAAMHRSTlMA/bGBFK1LgjellwUx2+VZo73SE6z5fQYOtzLRpxI22CC4g6ieV+yAEc8/ZocEHTzU+GNbAAAAV0lEQVQI1wXBBQKDMADAwLRl7szdgCks/3/d7hh0ehl0W21IwZgNR44nTNVZribmC1WXqzVstmpIALu9Gg5HOJ1VNV64arjd1YKy8sEz+nrD51tD0//xB/w6CnrIHetcAAAAAElFTkSuQmCC);position:absolute;top:9px;right:9px;width:10px;height:10px;overflow:hidden;}.we-pp-content{display:inline-block;margin:13px 19px;font-size:12px/1.4;max-height:500px;overflow-y:auto;overflow-x:hidden;}.we-pp-tip-cont{margin:0 auto;width:40px;height:16px;position:relative;overflow:hidden;}.we-pp-tip{width:15px;height:15px;padding:1px;margin:-8px auto 0;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);}
-    .we-pm-icon{ position:absolute;z-index:64;background-repeat:no-repeat;background-size:contain;background-position:center;background-image:url(data:image/png;base64,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);}
-    .we-polydragger-a{position:absolute;width:8px;height:8px;z-index:100;margin-left:-4px;margin-top:-4px;background-color:#36f;cursor:pointer;border:1px solid blue;}
-    .we-polydragger-b{position:absolute;width:6px;height:6px;z-index:99;margin-left:-3px;margin-top:-3px;background-color:rgba(180,220,250,0.9);cursor:pointer;border:1px solid blue;}
-    .cesium-credit-textContainer:before{content:'WebGL Earth \2022\20 Cesium \2022\20';}
-    #pause{position:fixed;bottom:0;right:0;margin:40px;cursor:pointer;}#pause i{font-size:60px;color:white;}
-  </style>
-  <script src="js/libs/webglearth2-custom.min.js"></script>
-  <script>
-    'use strict';
-    var markerList = [];
-    function label(name, lat, lnt, photo, students, earth) {
-        var photoDir = 'map/photo/';
-        var contentString = '<section class="row">' +
-                '<h6 class="ten columns text-center">' + name + '</h6>' +
-                '<figure class="two columns text-center">' +
-                '<img src="' + photoDir + photo + '.png">' +
-                '</figure>' +
-                '</section>';
-        $(students).find('student').each(function (index) {
-            if (index % 2 === 0) {
-                contentString += '<section class="row">'
-            }
-            contentString += '<div class="six columns">' +
-            '<h5>' + $(this).find('name').text() + '</h5>' +
-            '<figure><img src="' + photoDir + $(this).find('photo').text() + '.jpg"></figure>' +
-            '<span>' + $(this).find('intro').text() + '</span>' +
-            '</div>';
-            if ((index % 2 === 1) || (index + 1 == $(students).find('student').length)) {
-                contentString += '</section>';
-            }
-        });
-        contentString += '</section>'
-        markerList.push(WE.marker([lat, lnt]).addTo(earth).bindPopup(contentString));
-    }
-    function read(earth) {
-        $.ajax({
-            url: 'map/map.xml',
-            type: 'GET',
-            dataType: 'xml',
-            timeout: 1000,
-            success: function (xml) {
-                $(xml).find("university").each(function (i) {
-                    var name = $(this).children("name").text();
-                    var lat = $(this).children("position").children("latitude").text();
-                    var lon = $(this).children("position").children("longitude").text();
-                    var photo = $(this).children("photo").text();
-                    var students = $(this).children("students");
-                    label(name, lat, lon, photo, students, earth);
-                });
-                $(xml).find("university1").each(function (i) {
-                    var name = $(this).children("name").text();
-                    var lat = $(this).children("position").children("latitude").text();
-                    var lon = $(this).children("position").children("longitude").text();
-                    var photo = $(this).children("photo").text();
-                    var students = $(this).children("students");
-                    label(name, lat, lon, photo, students, earth);
-                });
-                $(xml).find("university2").each(function (i) {
-                    var name = $(this).children("name").text();
-                    var lat = $(this).children("position").children("latitude").text();
-                    var lon = $(this).children("position").children("longitude").text();
-                    var photo = $(this).children("photo").text();
-                    var students = $(this).children("students");
-                    label(name, lat, lon, photo, students, earth);
-                });
-            }
-        });
-        $(function () {
-            setTimeout(function () {
-                $("#expand").css('opacity', 0.2);
-            }, 4000);
-            $("#expand").mouseenter(function () {
-                $(this).css('opacity', 1);
-            }).mouseleave(function () {
-                $(this).css('opacity', 0.2);
-            });
-        });
-        $.ajax({
-            url: 'map/map_current.xml',
-            type: 'GET',
-            dataType: 'xml',
-            timeout: 1000,
-            success: function (xml) {
-                var html = '', html1 = '';
-                var dir = 'students.files/';
-                $(xml).find('group').each(function (i) {
-                    var tmp = '';
-                    tmp += '<h3>' + $(this).children('name').text() + '</h3>';
-                    html += '<div class="row">' + tmp + '</div>';
-                    html1 += '<div class="row text-center">' + tmp + '</div>';
-                    var html1Flag = true;
-                    $(this).children('students').find('student').each(function (j) {
-                        var tmp = '';
-                        tmp += '<h4>' + $(this).children('name').text() + '</h4><figure>';
-                        var photo = $(this).children('photo').text();
-                        if (photo) {
-                            var photoArr = photo.split(".");
-                            if (photoArr[photoArr.length - 1] == "png") {
-                                tmp += '<img src="' + dir + $(this).children('photo').text() + '">';
-                            } else {
-                                tmp += '<img src="' + dir + $(this).children('photo').text() + '.jpg">';
-                            }
-                        }
-                        tmp += '<figcaption>';
-                        if ($(this).children('degree').text()) {
-                            tmp += $(this).children('degree').text();
-                        }
-                        if ($(this).children('time').text()) {
-                            tmp += ' (' + $(this).children('time').text() + ')';
-                        }
-                        tmp += '</figure>' + '</figcaption>';
-                        if ($(this).children('joint').text()) {
-                            tmp += '<em>Joint with ' + $(this).children('joint').text() + '</em>';
-                        }
-                        tmp += '<dl><dt>Topic</dt><dd>'+ $(this).children('topic').text() +'</dd>';
-                        if ($(this).children('email').text()) {
-                            tmp += '<dt>Email</dt><dd>' + $(this).children('email').text() + '</dd>';
-                        }
-                        if ($(this).children('link').text()) {
-                            tmp += '<a href="' + $(this).children('link').text() + '">[Link]</a>';
-                        }
-                        tmp += '</dl>';
-                        if (j % 3 === 0) {
-                            html1 += '<div class="row"><div class="four columns">' + tmp + '</div>';
-                            html1Flag = false;
-                        } else {
-                            html1 += '<div class="four columns">' + tmp + '</div>';
-                        }
-                        if (j % 3 === 2) {
-                            html1 += '</div>'
-                            html1Flag = true;
-                        }
-                        html += '<div class="row">' + tmp + '</div>';
-                    });
-                    if (!html1Flag) html1 += '</div>';
-                });
-                $('#full-list').html(html);
-                $('#student-expand-modal').find('.content div').html(html1);
-            }
-        });
-    
-    }
-    $(function () {
-        var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 3.6});
-        WE.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
-                {
-                    attribution: 'Tiles \u00A9 Esri \u2014 Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-                }
-        ).addTo(earth);
-    
-        var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
-        for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
-            || window[vendors[x] + 'CancelRequestAnimationFrame'];
-        }
-    
-        if (!window.requestAnimationFrame)
-            window.requestAnimationFrame = function (callback, element) {
-                var currTime = new Date().getTime();
-                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function () {
-                            callback(currTime + timeToCall);
-                        },
-                        timeToCall);
-                lastTime = currTime + timeToCall;
-                return id;
-            };
-    
-        if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function (id) {
-                clearTimeout(id);
-            };
-    
-        var before = null;
-        var popupOpened = 0;
-        var animID;
-        read(earth);
-        animID = requestAnimationFrame(function animate(now) {
-            var c = earth.getPosition();
-            var elapsed = before ? now - before : 0;
-            before = now;
-            earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
-            animID = requestAnimationFrame(animate);
-        });
-        $(document).find('#student-globe').on('click', '.we-pp-close', function (event) {
-            popupOpened--;
-            if (popupOpened == 0) {
-                animID = requestAnimationFrame(function animate(now) {
-                    var c = earth.getPosition();
-                    var elapsed = before ? now - before : 0;
-                    before = now;
-                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
-                    animID = requestAnimationFrame(animate);
-                });
-            }
-        });
-        function markerListener() {
-            $(this).on('click', function (event) {
-                popupOpened--;
-                if (popupOpened == 0) {
-                    animID = requestAnimationFrame(function animate(now) {
-                        var c = earth.getPosition();
-                        var elapsed = before ? now - before : 0;
-                        before = now;
-                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
-                        animID = requestAnimationFrame(animate);
-                    });
-                }
-                $(this).unbind(event);
-                // $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);
-            });
-            popupOpened++;
-            before = null;
-            cancelAnimationFrame(animID);
-        }
-        $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);
-    
-        $("#pause").click(function (event) {
-            event.preventDefault();
-            if ($(this).attr("data-pause") === "pause") {
-                cancelAnimationFrame(animID);
-                $(this).find("i").removeClass("icon-pause").addClass("icon-play");
-                before = null;
-                $(this).attr("data-pause", "play");
-            } else if ($(this).attr("data-pause") === "play") {
-                animID = requestAnimationFrame(function animate(now) {
-                    var c = earth.getPosition();
-                    var elapsed = before ? now - before : 0;
-                    before = now;
-                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);
-                    animID = requestAnimationFrame(animate);
-                });
-                $(this).find("i").removeClass("icon-play").addClass("icon-pause");
-                $(this).attr("data-pause", "pause");
-            }
-        });
-    
-    });
-    var base_height;
-    function changeSize() {
-    var icons = $('.we-pm-icon')
-    base_height = icons[0].style.height.replace('px','');
-    icons.each(function(){
-    var number_student = $(this).parent().find('.we-pp-content').find('.six').length;
-    $(this)[0].style.height = base_height * number_student + 'px';
-    $(this)[0].style.marginTop = -0.5*base_height * number_student + 'px';
-    });
-    }
-  </script><!-- Change UA-XXXXX-X to be your site's ID -->
-  <script>
-    window._gaq = [['_setAccount','UA-37750226-1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script><!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-  chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
-  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-  <script>window.attachEvent('onload', function () {
-  CFInstall.check({mode: 'overlay'})
-  })</script>
-  <![endif]-->
-</body></html>
+<!doctype html><!--Created by Yang ZHANG on 1/12/2015.--><!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"> <![endif]--><!--[if IE 7]><html class="no-js ie7 oldie" lang="en"> <![endif]--><!--[if IE 8]><html class="no-js ie8 oldie" lang="en"> <![endif]--><!--[if IE 9]><html class="no-js ie9" lang="en"> <![endif]--><!--[if gt IE 9]><!--><html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Xinbing Wang | Students location</title><meta name="keywords" content="王新兵 Prof. Xinbing Wang"/><meta name="author" content="Yang ZHANG <&#122;&#104;&#097;&#110;&#103;&#121;&#097;&#110;&#103;&#057;&#051;&#064;&#114;&#111;&#099;&#107;&#101;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;>"><link rel="shortcut icon" href="favicon.png" type="image/x-icon"/><!-- Facebook Metadata /--><meta property="fb:page_id" content=""/><meta property="og:image" content=""/><meta property="og:description" content=""/><meta property="og:title" content=""/><!-- Google+ Metadata /--><meta itemprop="name" content=""><meta itemprop="description" content=""><meta itemprop="image" content=""><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss. However, there is a blank style.css in the css directory should you prefer --><link rel="stylesheet" href="css/style.css"><script src="js/libs/modernizr-2.6.2.min.js"></script></head><body id="student-map" onload="changeSize()">  <div id="student-list">    <div id="view-full">      <div class="btn info small"><a href="index.html">BACK TO HOME</a></div>      <div id="full-list"></div>      <div id="expand" gumby-trigger="#student-expand-modal" class="switch"><i class="icon-resize-full"></i></div>    </div>  </div>  <div id="student-globe-wrapper">    <div id="student-globe">      <div id="pause" data-pause="pause"><i class="icon-pause"></i></div>    </div>  </div>  <div id="student-expand-modal" class="modal">    <div class="content"><a href="//iwct.sjtu.edu.cn/Personal/xwang8/students.htm" target="_blank">[DEV]Full List</a><a gumby-trigger="|#student-expand-modal" title="Close" class="close switch"><i class="icon-cancel"></i></a>      <div></div>    </div>  </div>  <script>    var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));    if (!window.jQuery) {        if (!oldieCheck) {            document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');        } else {            document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');        }    }  </script>  <script gumby-touch="js/libs" src="js/libs/gumby.min.js"></script>  <script src="js/plugins.js"></script>  <script src="js/main.js"></script>  <style scoped="scoped">    .we-pp-content p{margin:18px 0; text-align:justify;}.we-pp-wrapper{padding:1px;text-align:left;border-radius:1px;}.we-pp{z-index:100;-webkit-transition:opacity 0.2s linear;-moz-transition:opacity 0.2s linear;-o-transition:opacity 0.2s linear;transition:opacity 0.2s linear;position:absolute;}.we-pp-wrapper,.we-pp-tip{background:white;box-shadow:0 1px 10px #888;-moz-box-shadow:0 1px 10px #888;-webkit-box-shadow:0 1px 14px #999;}.we-pp-close{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAk1BMVEX////Ny8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8vNy8sw0horAAAAMHRSTlMA/bGBFK1LgjellwUx2+VZo73SE6z5fQYOtzLRpxI22CC4g6ieV+yAEc8/ZocEHTzU+GNbAAAAV0lEQVQI1wXBBQKDMADAwLRl7szdgCks/3/d7hh0ehl0W21IwZgNR44nTNVZribmC1WXqzVstmpIALu9Gg5HOJ1VNV64arjd1YKy8sEz+nrD51tD0//xB/w6CnrIHetcAAAAAElFTkSuQmCC);position:absolute;top:9px;right:9px;width:10px;height:10px;overflow:hidden;}.we-pp-content{display:inline-block;margin:13px 19px;font-size:12px/1.4;max-height:500px;overflow-y:auto;overflow-x:hidden;}.we-pp-tip-cont{margin:0 auto;width:40px;height:16px;position:relative;overflow:hidden;}.we-pp-tip{width:15px;height:15px;padding:1px;margin:-8px auto 0;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);}    .we-pm-icon{ position:absolute;z-index:64;background-repeat:no-repeat;background-size:contain;background-position:center;background-image:url(data:image/png;base64,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);}    .we-polydragger-a{position:absolute;width:8px;height:8px;z-index:100;margin-left:-4px;margin-top:-4px;background-color:#36f;cursor:pointer;border:1px solid blue;}    .we-polydragger-b{position:absolute;width:6px;height:6px;z-index:99;margin-left:-3px;margin-top:-3px;background-color:rgba(180,220,250,0.9);cursor:pointer;border:1px solid blue;}    .cesium-credit-textContainer:before{content:'WebGL Earth \2022\20 Cesium \2022\20';}    #pause{position:fixed;bottom:0;right:0;margin:40px;cursor:pointer;}#pause i{font-size:60px;color:white;}  </style>  <script src="js/libs/webglearth2-custom.min.js"></script>  <script>    'use strict';    var markerList = [];    function label(name, lat, lnt, photo, students, earth) {        var photoDir = 'map/photo/';        var contentString = '<section class="row">' +                '<h6 class="ten columns text-center">' + name + '</h6>' +                '<figure class="two columns text-center">' +                '<img src="' + photoDir + photo + '.png">' +                '</figure>' +                '</section>';        $(students).find('student').each(function (index) {            if (index % 2 === 0) {                contentString += '<section class="row">'            }            contentString += '<div class="six columns">' +            '<h5>' + $(this).find('name').text() + '</h5>' +            '<figure><img src="' + photoDir + $(this).find('photo').text() + '.jpg"></figure>' +            '<span>' + $(this).find('intro').text() + '</span>' +            '</div>';            if ((index % 2 === 1) || (index + 1 == $(students).find('student').length)) {                contentString += '</section>';            }        });        contentString += '</section>'        markerList.push(WE.marker([lat, lnt]).addTo(earth).bindPopup(contentString));    }    function read(earth) {        $.ajax({            url: 'map/map.xml',            type: 'GET',            dataType: 'xml',            timeout: 1000,            success: function (xml) {                $(xml).find("university").each(function (i) {                    var name = $(this).children("name").text();                    var lat = $(this).children("position").children("latitude").text();                    var lon = $(this).children("position").children("longitude").text();                    var photo = $(this).children("photo").text();                    var students = $(this).children("students");                    label(name, lat, lon, photo, students, earth);                });                $(xml).find("university1").each(function (i) {                    var name = $(this).children("name").text();                    var lat = $(this).children("position").children("latitude").text();                    var lon = $(this).children("position").children("longitude").text();                    var photo = $(this).children("photo").text();                    var students = $(this).children("students");                    label(name, lat, lon, photo, students, earth);                });                $(xml).find("university2").each(function (i) {                    var name = $(this).children("name").text();                    var lat = $(this).children("position").children("latitude").text();                    var lon = $(this).children("position").children("longitude").text();                    var photo = $(this).children("photo").text();                    var students = $(this).children("students");                    label(name, lat, lon, photo, students, earth);                });            }        });        $(function () {            setTimeout(function () {                $("#expand").css('opacity', 0.2);            }, 4000);            $("#expand").mouseenter(function () {                $(this).css('opacity', 1);            }).mouseleave(function () {                $(this).css('opacity', 0.2);            });        });        $.ajax({            url: 'map/map_current.xml',            type: 'GET',            dataType: 'xml',            timeout: 1000,            success: function (xml) {                var html = '', html1 = '';                var dir = 'students.files/';                $(xml).find('group').each(function (i) {                    var tmp = '';                    tmp += '<h3>' + $(this).children('name').text() + '</h3>';                    html += '<div class="row">' + tmp + '</div>';                    html1 += '<div class="row text-center">' + tmp + '</div>';                    var html1Flag = true;                    $(this).children('students').find('student').each(function (j) {                        var tmp = '';                        tmp += '<h4>' + $(this).children('name').text() + '</h4><figure>';                        var photo = $(this).children('photo').text();                        if (photo) {                            var photoArr = photo.split(".");                            if (photoArr[photoArr.length - 1] == "png") {                                tmp += '<img src="' + dir + $(this).children('photo').text() + '">';                            } else {                                tmp += '<img src="' + dir + $(this).children('photo').text() + '.jpg">';                            }                        }                        tmp += '<figcaption>';                        if ($(this).children('degree').text()) {                            tmp += $(this).children('degree').text();                        }                        if ($(this).children('time').text()) {                            tmp += ' (' + $(this).children('time').text() + ')';                        }                        tmp += '</figure>' + '</figcaption>';                        if ($(this).children('joint').text()) {                            tmp += '<em>Joint with ' + $(this).children('joint').text() + '</em>';                        }                        tmp += '<dl><dt>Topic</dt><dd>'+ $(this).children('topic').text() +'</dd>';                        if ($(this).children('email').text()) {                            tmp += '<dt>Email</dt><dd>' + $(this).children('email').text() + '</dd>';                        }                        if ($(this).children('link').text()) {                            tmp += '<a href="' + $(this).children('link').text() + '">[Link]</a>';                        }                        tmp += '</dl>';                        if (j % 3 === 0) {                            html1 += '<div class="row"><div class="four columns">' + tmp + '</div>';                            html1Flag = false;                        } else {                            html1 += '<div class="four columns">' + tmp + '</div>';                        }                        if (j % 3 === 2) {                            html1 += '</div>'                            html1Flag = true;                        }                        html += '<div class="row">' + tmp + '</div>';                    });                    if (!html1Flag) html1 += '</div>';                });                $('#full-list').html(html);                $('#student-expand-modal').find('.content div').html(html1);            }        });        }    $(function () {        var earth = new WE.map('student-globe', {atmosphere: true, center: [37, -100], zoom: 3.6});        WE.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',                {                    attribution: 'Tiles \u00A9 Esri \u2014 Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'                }        ).addTo(earth);            var lastTime = 0;        var vendors = ['ms', 'moz', 'webkit', 'o'];        for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {            window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];            window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']            || window[vendors[x] + 'CancelRequestAnimationFrame'];        }            if (!window.requestAnimationFrame)            window.requestAnimationFrame = function (callback, element) {                var currTime = new Date().getTime();                var timeToCall = Math.max(0, 16 - (currTime - lastTime));                var id = window.setTimeout(function () {                            callback(currTime + timeToCall);                        },                        timeToCall);                lastTime = currTime + timeToCall;                return id;            };            if (!window.cancelAnimationFrame)            window.cancelAnimationFrame = function (id) {                clearTimeout(id);            };            var before = null;        var popupOpened = 0;        var animID;        read(earth);        animID = requestAnimationFrame(function animate(now) {            var c = earth.getPosition();            var elapsed = before ? now - before : 0;            before = now;            earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);            animID = requestAnimationFrame(animate);        });        $(document).find('#student-globe').on('click', '.we-pp-close', function (event) {            popupOpened--;            if (popupOpened == 0) {                animID = requestAnimationFrame(function animate(now) {                    var c = earth.getPosition();                    var elapsed = before ? now - before : 0;                    before = now;                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);                    animID = requestAnimationFrame(animate);                });            }        });        function markerListener() {            $(this).on('click', function (event) {                popupOpened--;                if (popupOpened == 0) {                    animID = requestAnimationFrame(function animate(now) {                        var c = earth.getPosition();                        var elapsed = before ? now - before : 0;                        before = now;                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);                        animID = requestAnimationFrame(animate);                    });                }                $(this).unbind(event);                // $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);            });            popupOpened++;            before = null;            cancelAnimationFrame(animID);        }        $(document).find('#student-globe').on('click', '.we-pm-icon', markerListener);            $("#pause").click(function (event) {            event.preventDefault();            if ($(this).attr("data-pause") === "pause") {                cancelAnimationFrame(animID);                $(this).find("i").removeClass("icon-pause").addClass("icon-play");                before = null;                $(this).attr("data-pause", "play");            } else if ($(this).attr("data-pause") === "play") {                animID = requestAnimationFrame(function animate(now) {                    var c = earth.getPosition();                    var elapsed = before ? now - before : 0;                    before = now;                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 120)]);                    animID = requestAnimationFrame(animate);                });                $(this).find("i").removeClass("icon-play").addClass("icon-pause");                $(this).attr("data-pause", "pause");            }        });        });    var base_height;    function changeSize() {    var icons = $('.we-pm-icon')    base_height = icons[0].style.height.replace('px','');    icons.each(function(){    var number_student = $(this).parent().find('.we-pp-content').find('.six').length;    $(this)[0].style.height = base_height * number_student + 'px';    $(this)[0].style.marginTop = -0.5*base_height * number_student + 'px';    });    }  </script><!-- Change UA-XXXXX-X to be your site's ID -->  <script>    window._gaq = [['_setAccount','UA-37750226-1'],['_trackPageview'],['_trackPageLoadTime']];    Modernizr.load({    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'    });  </script><!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.  chromium.org/developers/how-tos/chrome-frame-getting-started -->  <!--[if lt IE 7 ]>  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>  <script>window.attachEvent('onload', function () {  CFInstall.check({mode: 'overlay'})  })</script>  <![endif]--></body></html>
